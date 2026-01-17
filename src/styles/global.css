@@ -1,5 +1,31 @@
 /* ======================
-   Global Reset + Base
+   VARIABLES & TOKENS
+   The hallmark of a Product Designer is thinking in systems.
+====================== */
+:root {
+  /* Typography */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-tech: 'JetBrains Mono', 'Fira Code', monospace; /* Implies technical literacy */
+  
+  /* Palette - "Swiss Tech" */
+  --bg-color: #FAFAFA;       /* Soft warm grey */
+  --surface-color: #FFFFFF;  /* Pure white for cards */
+  --text-primary: #111111;   /* Nearly black, high contrast */
+  --text-secondary: #666666; /* Readable grey */
+  --border-color: #E5E5E5;
+  
+  /* The "Zing" - An electric accent used sparingly */
+  /* Try: #FF3366 (Red), #0055FF (Intense Blue), or #00C853 (Tech Green) */
+  --accent-color: #2D2D2D;   /* Kept monochrome for pure minimalism, change this if you want pop */
+  
+  /* Spacing */
+  --radius-md: 12px;
+  --radius-sm: 6px;
+  --transition-fast: 0.2s cubic-bezier(0.2, 0.0, 0.2, 1); /* Snappy, not sluggish */
+}
+
+/* ======================
+   RESET & BASE
 ====================== */
 * {
   margin: 0;
@@ -8,143 +34,191 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: #111;
-  background-color: #fafafa; /* softer than pure white */
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
   line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-/* Links */
-a {
-  color: #1a73e8; /* subtle but modern blue */
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #0d47a1; /* deeper blue on hover */
+  -webkit-font-smoothing: antialiased; /* Essential for thin modern fonts */
 }
 
 /* ======================
-   Layout
+   TYPOGRAPHY
+   Tension is created by contrast in weight and size.
 ====================== */
-main {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
-
-header, footer {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #333;
-}
-
-/* Headings */
 h1, h2, h3 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.04em; /* Tight tracking feels premium */
+  line-height: 1.1;
+  color: var(--text-primary);
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #0d47a1; /* adds a little pop without being flashy */
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive fluid typography */
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 1.8rem;
-  color: #1a237e; /* subtle accent for section headers */
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
 }
 
-h3 {
-  font-size: 1.4rem;
-  color: #333;
-}
-
-/* Paragraphs */
 p {
+  font-size: 1.05rem; /* Slightly larger than default for readability */
+  color: var(--text-secondary);
+  max-width: 65ch; /* Optimal reading length */
   margin-bottom: 1.5rem;
-  color: #444;
-  font-size: 1rem;
 }
 
-/* Lists */
-ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
+/* The "Product Spec" Look */
+small, .meta, time {
+  font-family: var(--font-tech);
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  transition: border-color var(--transition-fast);
+}
+
+a:hover {
+  border-bottom-color: var(--text-primary);
 }
 
 /* ======================
-   Cards / Highlight Sections
+   LAYOUT
+   Moving away from the narrow column to a "Grid View"
+====================== */
+main {
+  width: 100%;
+  max-width: 1100px; /* Wider canvas = more confidence */
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+header {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Grid utility for projects/articles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ======================
+   CARDS (The Bento Box Feel)
+   Clean, bordered, subtle. No heavy shadows.
 ====================== */
 section.card {
-  background-color: #fff;
-  border-left: 4px solid #1a73e8; /* subtle accent */
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  position: relative; /* For clicking the whole card */
 }
 
 section.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  border-color: #bbb; /* Subtle darkening of border */
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); /* Very soft diffuse shadow */
 }
 
-/* Buttons (optional for projects / links) */
-button, .btn {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
+section.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+section.card p {
   font-size: 0.95rem;
-  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+/* ======================
+   BUTTONS & ACTIONS
+   They should look like UI elements, not links.
+====================== */
+button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.4rem;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 500;
   color: #fff;
-  background-color: #1a73e8;
-  border: none;
-  border-radius: 6px;
+  background-color: var(--text-primary);
+  border: 1px solid transparent;
+  border-radius: 100px; /* Pill shape is very modern SaaS */
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: all var(--transition-fast);
 }
 
 button:hover, .btn:hover {
-  background-color: #0d47a1;
-  transform: translateY(-2px);
+  background-color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Secondary Button (Outline) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  border-color: var(--text-primary);
 }
 
 /* ======================
-   Subtle animations
+   UTILITIES & POLISH
 ====================== */
-a, button, section.card {
-  transition: all 0.2s ease;
+/* A subtle tag style for skills */
+.tag {
+  display: inline-block;
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+  color: #555;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* ======================
-   Footer
-====================== */
 footer {
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 5rem;
+  margin-top: 6rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  text-align: left; /* Center align is dated */
+  font-family: var(--font-tech);
+  font-size: 0.8rem;
+  color: #999;
 }
 
-/* ======================
-   Small touches
-====================== */
-hr {
-  border: 0;
-  height: 1px;
-  background: #e0e0e0;
-  margin: 2rem 0;
-}
-
-em {
-  color: #1a73e8;
-  font-style: normal;
-  font-weight: 600;
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  main { padding: 2rem 1.5rem; }
+  .grid-container { grid-template-columns: 1fr; }
 }
