@@ -1,4 +1,6 @@
-/* Global reset */
+/* ======================
+   Global Reset + Base
+====================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,35 +10,141 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #111;
-  background-color: #fff;
+  background-color: #fafafa; /* softer than pure white */
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
+/* Links */
 a {
-  color: #0d6efd;
+  color: #1a73e8; /* subtle but modern blue */
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #0d47a1; /* deeper blue on hover */
 }
 
+/* ======================
+   Layout
+====================== */
 main {
   max-width: 750px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 1.5rem;
 }
 
 header, footer {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  color: #333;
 }
 
+/* Headings */
 h1, h2, h3 {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
+h1 {
+  font-size: 2.5rem;
+  color: #0d47a1; /* adds a little pop without being flashy */
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1a237e; /* subtle accent for section headers */
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Lists */
 ul {
-  list-style: none;
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ======================
+   Cards / Highlight Sections
+====================== */
+section.card {
+  background-color: #fff;
+  border-left: 4px solid #1a73e8; /* subtle accent */
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons (optional for projects / links) */
+button, .btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+/* ======================
+   Subtle animations
+====================== */
+a, button, section.card {
+  transition: all 0.2s ease;
+}
+
+/* ======================
+   Footer
+====================== */
+footer {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 5rem;
+}
+
+/* ======================
+   Small touches
+====================== */
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 2rem 0;
+}
+
+em {
+  color: #1a73e8;
+  font-style: normal;
+  font-weight: 600;
 }
