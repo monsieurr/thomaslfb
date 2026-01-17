@@ -1,224 +1,240 @@
 /* ======================
-   VARIABLES & TOKENS
-   The hallmark of a Product Designer is thinking in systems.
+   1. VARIABLES & SYSTEM
+   The foundation of a scalable design system.
 ====================== */
 :root {
   /* Typography */
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-tech: 'JetBrains Mono', 'Fira Code', monospace; /* Implies technical literacy */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace; /* The "Tech" font */
+
+  /* Palette */
+  --bg: #FAFAFA;            /* Warm grey background - easier on eyes than white */
+  --surface: #FFFFFF;       /* Pure white for cards */
+  --text-main: #171717;     /* Almost black */
+  --text-muted: #737373;    /* Mid-grey */
+  --border: #E5E5E5;
   
-  /* Palette - "Swiss Tech" */
-  --bg-color: #FAFAFA;       /* Soft warm grey */
-  --surface-color: #FFFFFF;  /* Pure white for cards */
-  --text-primary: #111111;   /* Nearly black, high contrast */
-  --text-secondary: #666666; /* Readable grey */
-  --border-color: #E5E5E5;
-  
-  /* The "Zing" - An electric accent used sparingly */
-  /* Try: #FF3366 (Red), #0055FF (Intense Blue), or #00C853 (Tech Green) */
-  --accent-color: #2D2D2D;   /* Kept monochrome for pure minimalism, change this if you want pop */
-  
-  /* Spacing */
-  --radius-md: 12px;
-  --radius-sm: 6px;
-  --transition-fast: 0.2s cubic-bezier(0.2, 0.0, 0.2, 1); /* Snappy, not sluggish */
+  /* THE ACCENT: Electric Violet */
+  /* This is your "Brand Color". It appears only on interaction or key data. */
+  --accent: #6366f1;        
+  --accent-glow: rgba(99, 102, 241, 0.15); /* Soft glow version */
+
+  /* Spacing & Feel */
+  --radius: 8px;            /* Tighter radius feels more "pro" than 12px */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1); /* Custom "Apple-like" spring easing */
 }
 
 /* ======================
-   RESET & BASE
+   2. GLOBAL RESET & BASE
 ====================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-primary);
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-main);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased; /* Essential for thin modern fonts */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* THE UNIQUE TOUCH: Custom Selection Color */
+::selection {
+  background: var(--accent);
+  color: #fff;
 }
 
 /* ======================
-   TYPOGRAPHY
-   Tension is created by contrast in weight and size.
+   3. TYPOGRAPHY
+   High contrast, tight tracking.
 ====================== */
 h1, h2, h3 {
+  color: var(--text-main);
   font-weight: 600;
-  letter-spacing: -0.04em; /* Tight tracking feels premium */
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--text-primary);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive fluid typography */
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 1.5rem;
+}
+
+/* The "Eyebrow" text - A tiny mono label above headers */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 h2 {
   font-size: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* A decorative line next to H2s */
+h2::after {
+  content: "";
+  height: 1px;
+  background: var(--border);
+  flex-grow: 1;
 }
 
 p {
-  font-size: 1.05rem; /* Slightly larger than default for readability */
-  color: var(--text-secondary);
-  max-width: 65ch; /* Optimal reading length */
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 65ch;
   margin-bottom: 1.5rem;
 }
 
-/* The "Product Spec" Look */
-small, .meta, time {
-  font-family: var(--font-tech);
-  font-size: 0.8rem;
-  color: #888;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
+/* ======================
+   4. LINKS & INTERACTIONS
+   Moving away from standard underlines to "creative" hovers.
+====================== */
 a {
-  color: var(--text-primary);
+  color: var(--text-main);
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-  transition: border-color var(--transition-fast);
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 a:hover {
-  border-bottom-color: var(--text-primary);
+  background-size: 100% 2px;
+  color: var(--accent);
 }
 
 /* ======================
-   LAYOUT
-   Moving away from the narrow column to a "Grid View"
+   5. LAYOUT
 ====================== */
 main {
-  width: 100%;
-  max-width: 1100px; /* Wider canvas = more confidence */
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 header {
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  margin-bottom: 4rem;
 }
 
-/* Grid utility for projects/articles */
-.grid-container {
+/* The Grid */
+.grid-bento {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 /* ======================
-   CARDS (The Bento Box Feel)
-   Clean, bordered, subtle. No heavy shadows.
+   6. CARDS (THE SHOWCASE)
+   Minimal state -> Active Glow state
 ====================== */
-section.card {
-  background: var(--surface-color);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+.card {
+  background: var(--surface);
   padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: all 0.4s var(--ease);
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
-  position: relative; /* For clicking the whole card */
 }
 
-section.card:hover {
+/* The "Pro" Hover Effect: Slight lift + Colored Shadow + Border Color */
+.card:hover {
   transform: translateY(-4px);
-  border-color: #bbb; /* Subtle darkening of border */
-  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); /* Very soft diffuse shadow */
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px -10px var(--accent-glow);
 }
 
-section.card h3 {
-  margin-bottom: 0.5rem;
+.card h3 {
   font-size: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-section.card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  color: var(--text-secondary);
+/* Meta tags inside cards (Date, Tech stack) */
+.card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card-meta span {
+  background: #f4f4f5;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 /* ======================
-   BUTTONS & ACTIONS
-   They should look like UI elements, not links.
+   7. BUTTONS
+   Primary = Solid Accent
+   Secondary = Outline
 ====================== */
-button, .btn {
+.btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1.4rem;
-  font-family: var(--font-main);
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  background: var(--text-main);
   color: #fff;
-  background-color: var(--text-primary);
-  border: 1px solid transparent;
-  border-radius: 100px; /* Pill shape is very modern SaaS */
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: none;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: transform 0.2s var(--ease), background 0.2s;
+  /* Reset the link style for buttons */
+  background-image: none;
 }
 
-button:hover, .btn:hover {
-  background-color: #333;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  color: #fff;
+  box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* Secondary Button (Outline) */
-.btn-secondary {
-  background-color: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
 }
 
-.btn-secondary:hover {
-  background-color: #fff;
-  border-color: var(--text-primary);
+.btn-ghost:hover {
+  border-color: var(--text-main);
+  color: var(--text-main);
+  background: transparent;
+  transform: translateY(-2px);
 }
 
 /* ======================
-   UTILITIES & POLISH
+   8. UTILITIES
 ====================== */
-/* A subtle tag style for skills */
-.tag {
-  display: inline-block;
-  font-family: var(--font-tech);
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
-  background: #f0f0f0;
-  border-radius: 4px;
-  color: #555;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+/* Use this for your "Role" in the header */
+.highlight {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 footer {
-  margin-top: 6rem;
-  border-top: 1px solid var(--border-color);
+  margin-top: 8rem;
+  border-top: 1px solid var(--border);
   padding-top: 2rem;
-  text-align: left; /* Center align is dated */
-  font-family: var(--font-tech);
-  font-size: 0.8rem;
-  color: #999;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  main { padding: 2rem 1.5rem; }
-  .grid-container { grid-template-columns: 1fr; }
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
 }
