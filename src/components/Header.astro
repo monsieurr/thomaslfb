@@ -1,10 +1,89 @@
-<header>
-  <h1>Thomas L.</h1>
-  <nav>
-    <a href="/">Home</a> •
-    <a href="/about">About</a> •
-    <a href="/projects">Projects</a> •
-    <a href="/cv">CV</a> •
-    <!-- <a href="/photography">Photography</a> -->
-  </nav>
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+---
+
+<header class="site-header">
+  <div class="header-content">
+    
+    <!-- 1. THE LOGO / NAME -->
+    <a href="/" class="logo">
+      Thomas L.
+    </a>
+
+    <!-- 2. THE NAVIGATION -->
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a href="/" class={currentPath === "" ? "active" : ""}>Home</a>
+        </li>
+        <li>
+          <a href="/projects" class={currentPath.startsWith("projects") ? "active" : ""}>Projects</a>
+        </li>
+        <li>
+          <a href="/cv" class={currentPath.startsWith("cv") ? "active" : ""}>CV</a>
+        </li>
+        <!-- Uncomment this later when you are ready -->
+        <!-- <li><a href="/articles">Articles</a></li> -->
+      </ul>
+    </nav>
+
+  </div>
 </header>
+
+<style>
+  /* Container to keep it aligned with your Main content width */
+  .site-header {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .header-content {
+    max-width: 750px; /* Matches your Global.css main width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo Styling */
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+  
+  .logo:hover {
+    text-decoration: none; /* No underline on logo */
+    color: #1a73e8; /* Your Blue */
+  }
+
+  /* Navigation Styling */
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: #1a73e8; /* Your Blue */
+  }
+
+  /* Active State (Visual cue for current page) */
+  .nav-links a.active {
+    color: #111;
+    font-weight: 600;
+  }
+</style>
