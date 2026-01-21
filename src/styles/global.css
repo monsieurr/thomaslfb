@@ -5,23 +5,22 @@
 :root {
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace; /* The "Tech" font */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Palette */
-  --bg: #FAFAFA;            /* Warm grey background - easier on eyes than white */
-  --surface: #FFFFFF;       /* Pure white for cards */
-  --text-main: #171717;     /* Almost black */
-  --text-muted: #737373;    /* Mid-grey */
+  --bg: #FAFAFA;
+  --surface: #FFFFFF;
+  --text-main: #171717;
+  --text-muted: #737373;
   --border: #E5E5E5;
   
-  /* THE ACCENT: Electric Violet */
-  /* This is your "Brand Color". It appears only on interaction or key data. */
-  --accent: #6366f1;        
-  --accent-glow: rgba(99, 102, 241, 0.15); /* Soft glow version */
+  /* THE NEW ACCENT COLOR */
+  --accent: #6600FF;  /* <--- The Electric Purple from your image */
+  --accent-glow: rgba(102, 0, 255, 0.15); /* A soft glow matching the purple */
 
   /* Spacing & Feel */
-  --radius: 8px;            /* Tighter radius feels more "pro" than 12px */
-  --ease: cubic-bezier(0.16, 1, 0.3, 1); /* Custom "Apple-like" spring easing */
+  --radius: 8px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ======================

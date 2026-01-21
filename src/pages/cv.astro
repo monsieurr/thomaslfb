@@ -38,7 +38,6 @@ import '../styles/global.css';
         <hr />
 
         <!-- 1. SKILLS & LANGUAGES -->
-        <!-- I switched back to a flex layout to avoid the "weird" grid look on smaller screens -->
         <section class="cv-section split-section">
             
             <div class="half-column">
@@ -206,10 +205,12 @@ import '../styles/global.css';
     .cv-nav a {
         font-size: 0.9rem;
         color: #777;
+        transition: color 0.2s ease;
     }
     .cv-nav a:hover {
-        color: #1a73e8; /* Original Blue */
-        text-decoration: underline;
+        /* USE GLOBAL VARIABLE */
+        color: var(--accent); 
+        text-decoration: none;
     }
 
     /* Header */
@@ -220,14 +221,16 @@ import '../styles/global.css';
     
     .role {
         font-size: 1.3rem;
-        color: #1a73e8; /* Original Blue */
+        /* USE GLOBAL VARIABLE */
+        color: var(--accent); 
         font-weight: 600;
         margin-bottom: 0.5rem;
     }
 
     /* Contact Links */
     .contact-info a {
-        color: #1a73e8;
+        /* USE GLOBAL VARIABLE */
+        color: var(--accent);
         font-weight: 500;
         text-decoration: none;
     }
@@ -311,7 +314,8 @@ import '../styles/global.css';
     }
 
     .company {
-        color: #1a73e8; /* Original Blue */
+        /* USE GLOBAL VARIABLE */
+        color: var(--accent);
         font-weight: 600;
         font-size: 0.95rem;
         margin-bottom: 0.8rem;
