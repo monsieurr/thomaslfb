@@ -23,27 +23,25 @@ import '../styles/global.css';
             <p class="role">Technical Product Owner (PSPO I)</p>
             
             <div class="contact-info">
+                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
+                <span class="sep">•</span>
+                <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank">LinkedIn Profile</a>
+            </div>
+            
+            <div class="status-info">
                 <span>Available in 3 months</span>
                 <span class="sep">•</span>
                 <span>Paris / Ile-de-France</span>
-                <span class="sep">•</span>
-                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
-            </div>
-            
-            <div class="contact-sub">
-                <span>30 years old - Driving License</span>
-                <span class="sep">•</span>
-                <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank">LinkedIn Profile</a>
             </div>
         </header>
 
         <hr />
 
         <!-- 1. SKILLS & LANGUAGES -->
-        <section class="top-grid cv-section">
+        <!-- I switched back to a flex layout to avoid the "weird" grid look on smaller screens -->
+        <section class="cv-section split-section">
             
-            <!-- Left Column: Hard Skills -->
-            <div class="grid-column">
+            <div class="half-column">
                 <h3>Product & Tech Skills</h3>
                 <ul class="skill-list">
                     <li><strong>Methods:</strong> Agile Scrum, Discovery, V-Model</li>
@@ -54,8 +52,7 @@ import '../styles/global.css';
                 </ul>
             </div>
 
-            <!-- Right Column: Languages -->
-            <div class="grid-column">
+            <div class="half-column">
                 <h3>Languages</h3>
                 <ul class="language-list">
                     <li>
@@ -197,9 +194,9 @@ import '../styles/global.css';
 
 <!-- SCOPED STYLES -->
 <style>
-    /* Spacing Utility to prevent collision */
+    /* Section Spacing */
     .cv-section {
-        margin-bottom: 4rem; /* Adds breathing room between major sections */
+        margin-bottom: 3.5rem;
     }
 
     /* Navigation */
@@ -211,7 +208,8 @@ import '../styles/global.css';
         color: #777;
     }
     .cv-nav a:hover {
-        color: #1a73e8;
+        color: #1a73e8; /* Original Blue */
+        text-decoration: underline;
     }
 
     /* Header */
@@ -222,21 +220,25 @@ import '../styles/global.css';
     
     .role {
         font-size: 1.3rem;
-        color: #1a73e8; /* Global Blue */
+        color: #1a73e8; /* Original Blue */
         font-weight: 600;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 
-    .contact-info, .contact-sub {
+    /* Contact Links */
+    .contact-info a {
+        color: #1a73e8;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    .status-info {
         color: #555;
         font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    .contact-sub {
-        font-size: 0.9rem;
-        color: #777;
-        margin-top: 0.3rem;
+        margin-top: 0.2rem;
     }
 
     .sep {
@@ -244,12 +246,14 @@ import '../styles/global.css';
         color: #ccc;
     }
 
-    /* Top Grid */
-    .top-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    /* Skills & Languages (Flexbox Split) */
+    .split-section {
+        display: flex;
         gap: 3rem;
-        /* margin-bottom is handled by .cv-section now */
+    }
+    
+    .half-column {
+        flex: 1;
     }
 
     .skill-list, .language-list {
@@ -303,11 +307,11 @@ import '../styles/global.css';
         font-weight: 500;
         text-transform: uppercase;
         text-align: right;
-        min-width: 120px; /* Prevents wrapping on dates */
+        min-width: 120px;
     }
 
     .company {
-        color: #1a73e8;
+        color: #1a73e8; /* Original Blue */
         font-weight: 600;
         font-size: 0.95rem;
         margin-bottom: 0.8rem;
@@ -362,8 +366,8 @@ import '../styles/global.css';
 
     /* Responsive Mobile */
     @media (max-width: 600px) {
-        .top-grid {
-            grid-template-columns: 1fr;
+        .split-section {
+            flex-direction: column;
             gap: 2rem;
         }
         
@@ -377,7 +381,7 @@ import '../styles/global.css';
             margin-bottom: 0.5rem;
         }
         
-        .contact-info, .contact-sub {
+        .contact-info, .status-info {
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
