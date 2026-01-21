@@ -3,7 +3,7 @@
 import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,171 +14,271 @@ import '../styles/global.css';
     <main>
         <!-- NAVIGATION -->
         <nav class="cv-nav">
-            <a href="/">← Back to Portfolio</a>
-            <button onclick="window.print()" class="btn">Print / Save PDF</button>
+            <a href="/">← Retour au Portfolio</a>
         </nav>
 
         <!-- HEADER -->
         <header class="cv-header">
             <h1>Thomas Lefebvre</h1>
-            <p class="role">Product Owner Data & ESG (PSPO I)</p>
+            <p class="role">Technical Product Owner (PSPO I)</p>
+            
             <div class="contact-info">
-                <span>Available in 3 months</span> •
-                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a> •
-                <span>Paris, France</span>
+                <span>Disponible sous 3 mois</span>
+                <span class="sep">•</span>
+                <span>Paris / Ile-de-France</span>
+                <span class="sep">•</span>
+                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
+            </div>
+            
+            <div class="contact-sub">
+                <span>30 ans - Permis B</span>
+                <span class="sep">•</span>
+                <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank">LinkedIn Profile</a>
             </div>
         </header>
 
         <hr />
 
-        <!-- SKILLS SECTION (2 Columns) -->
-        <section class="skills-section">
-            <div class="skill-column">
-                <h3>Product & Impact</h3>
-                <ul>
-                    <li>Methodology: Agile Scrum, Discovery, Waterfall</li>
-                    <li>Impact: Green IT, LCA, Carbon Footprint</li>
-                    <li>Animation: Climate Fresk & Digital Collage</li>
-                    <li>Practice: User Stories, Prioritization, UAT</li>
+        <!-- 1. COMPÉTENCES & LANGUES (Grid Layout) -->
+        <section class="top-grid">
+            
+            <!-- Colonne Gauche : Hard Skills -->
+            <div class="grid-column">
+                <h3>Compétences Product & Tech</h3>
+                <ul class="skill-list">
+                    <li><strong>Méthodes :</strong> Agile Scrum, Discovery, Cycle en V</li>
+                    <li><strong>Pratique :</strong> User Stories, Priorisation, Recette</li>
+                    <li><strong>Outils :</strong> Jira, Confluence, Notion, Figma</li>
+                    <li><strong>Data :</strong> SQL (Avancé), Python (Pandas), Excel</li>
+                    <li><strong>Dev :</strong> Git, Docker, API Rest, HTML/JS</li>
                 </ul>
             </div>
-            <div class="skill-column">
-                <h3>Data & Tech</h3>
-                <ul>
-                    <li>Data: SQL (Advanced), Python (Pandas), GIS</li>
-                    <li>Languages: English (Full Prof.), Spanish (Prof.), French (Native)</li>
+
+            <!-- Colonne Droite : Langues -->
+            <div class="grid-column">
+                <h3>Langues</h3>
+                <ul class="language-list">
+                    <li>
+                        <span class="lang-name">Français</span>
+                        <span class="lang-level">Native or bilingual proficiency</span>
+                    </li>
+                    <li>
+                        <span class="lang-name">Anglais</span>
+                        <span class="lang-level">Full professional proficiency</span>
+                    </li>
+                    <li>
+                        <span class="lang-name">Espagnol</span>
+                        <span class="lang-level">Professional working proficiency</span>
+                    </li>
+                    <li>
+                        <span class="lang-name">Italien</span>
+                        <span class="lang-level">Elementary proficiency</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <!-- EXPERIENCE SECTION -->
+        <!-- 2. EXPÉRIENCES PROFESSIONNELLES -->
         <section>
-            <h2>Professional Experience</h2>
+            <h2>Expériences Professionnelles</h2>
 
             <!-- JOB 1: Mc2i -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Consultant ESG & Data</h3>
-                    <span class="date">Dec 2021 — Present</span>
+                    <h3>Product Owner / Consultant Data</h3>
+                    <span class="date">Dec 2021 — Présent</span>
                 </div>
                 <div class="company">Mc2i</div>
-                <p>Steering high-impact environmental data products.</p>
+                <p class="job-intro">Interventions sur des projets de transformation numérique et data à fort enjeu.</p>
                 
                 <div class="sub-job">
-                    <p><strong>Caisse des Dépôts (Technical PO):</strong> Built a geo-decisional tool to accelerate social housing thermal renovation using Energy/GIS data.</p>
+                    <h4>Caisse des Dépôts — Product Owner & BA</h4>
+                    <ul>
+                        <li><strong>Pilotage :</strong> Gestion du Backlog, priorisation par la valeur métier et suivi des KPIs.</li>
+                        <li><strong>Delivery :</strong> Rédaction de User Stories avec critères d'acceptation et animation des rituels.</li>
+                        <li><strong>Data :</strong> Analyse de données (SQL/Python) pour orienter les décisions produit.</li>
+                    </ul>
                 </div>
+
                 <div class="sub-job">
-                    <p><strong>Internal Lead PO:</strong> Designed "Green Project Score" calculator for IT projects based on RGAA/RGESN standards.</p>
+                    <h4>Sucden — Data Strategist</h4>
+                    <p>Audit de la stratégie Data et gouvernance Cacao Durable (contexte RSE et International).</p>
                 </div>
+
                 <div class="sub-job">
-                    <p><strong>Sucden & GRDF:</strong> Data Strategy audit for Sustainable Cocoa & IT coordination for Energy sector.</p>
+                    <h4>Carrefour — Technical BA</h4>
+                    <p>Pilotage d'une migration critique de bases de données pricing (SQL).</p>
+                </div>
+
+                <div class="sub-job">
+                    <h4>GRDF — Chef de Projet</h4>
+                    <p>Coordination du projet de migration d'outil de gestion logistique, gestion des délais.</p>
                 </div>
             </section>
 
             <!-- JOB 2: Freelance -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Fullstack Developer (Freelance)</h3>
+                    <h3>Développeur Fullstack Freelance</h3>
                     <span class="date">Sep 2020 — Jul 2021</span>
                 </div>
-                <div class="company">Personal Projects</div>
-                <p>Web App development (React, Node.js). Implemented software eco-design approaches (Query optimization).</p>
+                <div class="company">Projets personnels</div>
+                <p>Réalisation de projets techniques et créatifs, montée en compétence web (React, Node.js, Python).</p>
             </section>
 
             <!-- JOB 3: Thales -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Software Engineer</h3>
+                    <h3>Ingénieur Logiciel</h3>
                     <span class="date">Mar 2020 — Sep 2020</span>
                 </div>
                 <div class="company">Thales</div>
-                <p>Development and optimization of critical software (Java) focusing on performance and stability.</p>
+                <p>Maintien et amélioration de logiciel critique (Java), analyse, conception et développement.</p>
             </section>
 
-            <!-- JOB 4: Vedecom -->
+            <!-- JOB 4: VEDECOM -->
             <section class="card">
                 <div class="job-header">
                     <h3>Data Analyst</h3>
-                    <span class="date">Jun 2019 — Sep 2019</span>
+                    <span class="date">Juin 2019 — Sep 2019</span>
                 </div>
                 <div class="company">VEDECOM Tech</div>
-                <p>Data analysis for autonomous vehicles (Future Mobility) using Python.</p>
+                <p>Extraction, analyse et visualisation de données sur véhicule à conduite autonome (Python).</p>
+            </section>
+
+            <!-- JOB 5: Captain Train -->
+            <section class="card">
+                <div class="job-header">
+                    <h3>Développeur Back-End</h3>
+                    <span class="date">Avr 2016 — Mai 2016</span>
+                </div>
+                <div class="company">CaptainTrain</div>
+                <p>Amélioration de la base de données et conception d'une carte européenne des rails (RubyOnRails).</p>
             </section>
         </section>
 
-        <!-- EDUCATION SECTION -->
+        <!-- 3. ÉTUDES & CERTIFICATIONS -->
         <section>
-            <h2>Education & Certifications</h2>
-            
+            <h2>Études & Certifications</h2>
             <section class="card">
-                <ul class="education-list">
+                <ul class="simple-list">
                     <li>
-                        <strong>2023:</strong> Facilitator Climate Fresk & Digital Collage
+                        <strong>May 2023 :</strong> Mastering Web Quality Assurance (Opquast)
                     </li>
                     <li>
-                        <strong>2023:</strong> Certification PSPO I (Scrum.org)
+                        <strong>Sep 2022 :</strong> Sustainable IT Knowledge Certificate (Institut du Numérique Responsable)
                     </li>
                     <li>
-                        <strong>2017 — 2020:</strong> M.Sc. in Software Architecture & Web (University of Montpellier)
+                        <strong>2023 :</strong> Certification PSPO I (Scrum.org)
                     </li>
                     <li>
-                        <strong>2013 — 2016:</strong> B.Sc. in Computer Science (University of Cergy-Pontoise)
+                        <strong>2017 — 2020 :</strong> Master Architecture Logicielle et Web (Université de Montpellier)
+                    </li>
+                    <li>
+                        <strong>2013 — 2016 :</strong> Licence Informatique (Université de Cergy-Pontoise)
                     </li>
                 </ul>
             </section>
         </section>
 
-        <!-- INTERESTS -->
+        <!-- 4. CENTRES D'INTÉRÊT -->
         <section>
-            <h3>Interests</h3>
-            <p>Active watch on Green IT and Low-Tech. Amateur photographer for 15+ years.</p>
+            <h3>Centres d'intérêt</h3>
+            <ul class="interest-list">
+                <li><strong>Informatique :</strong> Développement d'outils, automatisations et veille sur le secteur.</li>
+                <li><strong>Photographie :</strong> Pratique amateur depuis plus de 15 ans.</li>
+                <li><strong>Sport :</strong> Course à pied, Tir à l'arc.</li>
+            </ul>
         </section>
 
     </main>
-
 </body>
 </html>
 
-<!-- SCOPED STYLES: Matches your Global CSS visuals but handles CV layout -->
+<!-- STYLES SCOPÉS -->
 <style>
-    /* Navigation Bar */
+    /* Navigation */
     .cv-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 2rem;
     }
+    .cv-nav a {
+        font-size: 0.9rem;
+        color: #777;
+    }
+    .cv-nav a:hover {
+        color: #1a73e8;
+    }
 
-    /* Header Specifics */
+    /* En-tête */
     .cv-header {
-        text-align: left; /* Overrides global center alignment for CV header */
-        margin-bottom: 1rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
     }
     
     .role {
-        font-size: 1.2rem;
-        color: #1a73e8; /* Your Blue */
-        font-weight: 500;
-        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        color: #1a73e8; /* Bleu Global */
+        font-weight: 600;
+        margin-bottom: 0.8rem;
     }
 
-    .contact-info {
-        color: #666;
+    .contact-info, .contact-sub {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .contact-sub {
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 0.3rem;
+    }
+
+    .sep {
+        margin: 0 0.5rem;
+        color: #ccc;
+    }
+
+    /* Top Grid */
+    .top-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .skill-list, .language-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .skill-list li {
+        margin-bottom: 0.5rem;
+        color: #333;
         font-size: 0.95rem;
     }
 
-    /* Skills Grid */
-    .skills-section {
+    /* Langues styling */
+    .language-list li {
         display: flex;
-        gap: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    .skill-column {
-        flex: 1;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        border-left: 3px solid #eee;
+        padding-left: 1rem;
     }
 
-    /* Job Card Tweaks */
+    .lang-name {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .lang-level {
+        font-size: 0.85rem;
+        color: #777;
+        margin-top: 2px;
+    }
+
+    /* Cartes Expérience */
     .job-header {
         display: flex;
         justify-content: space-between;
@@ -188,70 +288,88 @@ import '../styles/global.css';
 
     .job-header h3 {
         margin-bottom: 0;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+        color: #222;
     }
 
     .date {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: #777;
         font-weight: 500;
+        text-transform: uppercase;
     }
 
     .company {
-        color: #1a73e8; /* Your Blue */
+        color: #1a73e8;
         font-weight: 600;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
     }
 
+    .job-intro {
+        margin-bottom: 1.2rem;
+        font-style: italic;
+        color: #555;
+    }
+
+    /* Sous-Missions */
     .sub-job {
         margin-top: 1rem;
-        padding-top: 0.5rem;
+        padding-top: 0.8rem;
         border-top: 1px dashed #e0e0e0;
     }
-    
-    .sub-job p {
-        margin-bottom: 0;
+
+    .sub-job h4 {
         font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: #333;
     }
 
-    /* Education List */
-    .education-list {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-    
-    .education-list li {
+    .sub-job p {
+        font-size: 0.9rem;
         margin-bottom: 0.5rem;
+    }
+
+    .sub-job ul {
+        margin-top: 0.5rem;
+        padding-left: 1.2rem;
+    }
+
+    .sub-job ul li {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
         color: #444;
     }
 
-    /* Responsive */
+    /* Listes simples */
+    .simple-list, .interest-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .simple-list li, .interest-list li {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    /* Responsive Mobile */
     @media (max-width: 600px) {
-        .skills-section {
-            flex-direction: column;
-            gap: 1rem;
+        .top-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
         
         .job-header {
             flex-direction: column;
         }
-    }
-
-    /* PRINT STYLES - Clean PDF generation */
-    @media print {
-        .cv-nav { display: none; }
-        body { background-color: #fff; }
-        main { max-width: 100%; padding: 0; margin: 0; }
-        section.card {
-            border: none; /* Remove blue border for print to save ink/cleaner look */
-            box-shadow: none;
-            padding: 0;
-            margin-bottom: 2rem;
+        
+        .contact-info, .contact-sub {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
         }
-        h1 { color: #000; font-size: 2rem; }
-        h2 { color: #000; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; }
-        a { text-decoration: none; color: #000; }
+        
+        .sep { display: none; }
     }
 </style>
