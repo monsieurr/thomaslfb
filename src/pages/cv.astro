@@ -1,26 +1,29 @@
 ---
-// Import your ORIGINAL global styles
+// 1. Import Components
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+const pageTitle = "CV - Thomas Lefebvre";
 ---
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Thomas Lefebvre</title>
+    <title>{pageTitle}</title>
 </head>
 <body>
 
-    <main>
-        <!-- NAVIGATION -->
-        <nav class="cv-nav">
-            <a href="/">← Back to Portfolio</a>
-        </nav>
+    <!-- 2. Site Header (Navigation) -->
+    <Header />
 
-        <!-- HEADER -->
-        <header class="cv-header">
+    <main>
+        
+        <!-- CV HEADER -->
+        <header class="cv-profile-header">
             <h1>Thomas Lefebvre</h1>
-            <p class="role">Technical Product Owner (PSPO I)</p>
+            <p class="role">Senior Consultant | Technical Product Owner</p>
             
             <div class="contact-info">
                 <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
@@ -35,11 +38,10 @@ import '../styles/global.css';
             </div>
         </header>
 
-        <hr />
+        <hr class="divider"/>
 
         <!-- 1. SKILLS & LANGUAGES -->
         <section class="cv-section split-section">
-            
             <div class="half-column">
                 <h3>Product & Tech Skills</h3>
                 <ul class="skill-list">
@@ -78,78 +80,136 @@ import '../styles/global.css';
         <section class="cv-section">
             <h2>Professional Experience</h2>
 
-            <!-- JOB 1: Mc2i -->
+            <!-- JOB 1: Mc2i (Detailed) -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Product Owner / Data Consultant</h3>
+                    <h3>Senior Consultant | Technical Product Owner</h3>
                     <span class="date">Dec 2021 — Present</span>
                 </div>
-                <div class="company">Mc2i</div>
-                <p class="job-intro">Managing high-stakes digital transformation and data projects.</p>
+                <div class="company">Mc2i (Permanent)</div>
                 
-                <div class="sub-job">
-                    <h4>Caisse des Dépôts — Product Owner & BA</h4>
-                    <ul>
-                        <li><strong>Management:</strong> Backlog management, business value prioritization, and KPI tracking.</li>
-                        <li><strong>Delivery:</strong> Writing User Stories with acceptance criteria and facilitating Agile rituals.</li>
-                        <li><strong>Data:</strong> Data analysis (SQL/Python) to guide product decisions.</li>
-                    </ul>
-                </div>
+                <div class="job-details">
+                    <p class="context">
+                        <strong>Context:</strong> Mc2i is a digital transformation consulting firm (1500+ employees), focused on high-stakes Data and Innovation projects for major clients (Caisse des Dépôts, Carrefour, Sucden).
+                    </p>
+                    
+                    <p>
+                        <strong>Role:</strong> Senior Consultant & Product Owner. Operational involvement as a PO and Business Analyst across the full product lifecycle (Discovery to Delivery).
+                    </p>
 
-                <div class="sub-job">
-                    <h4>Sucden — Data Strategist</h4>
-                    <p>Data Strategy audit and Sustainable Cocoa governance (CSR & International context).</p>
-                </div>
+                    <p class="highlight-box">
+                        <strong>Intrapreneurial role:</strong> Contributor on the "Green Project Score" (Responsible Digital assessment tool) and member of the Data & AI club (AI Act training, benchmarks).
+                    </p>
 
-                <div class="sub-job">
-                    <h4>Carrefour — Technical BA</h4>
-                    <p>Managed a critical pricing database migration (SQL).</p>
-                </div>
-
-                <div class="sub-job">
-                    <h4>GRDF — Project Manager</h4>
-                    <p>Coordinated the migration of a logistics management tool, timeline and deadline management.</p>
+                    <div class="tasks-block">
+                        <span class="tasks-label">Key Tasks:</span>
+                        <ul>
+                            <li><strong>Product Management & Methodology:</strong> Managing and prioritizing backlog by value, writing functional specs and User Stories.</li>
+                            <li><strong>Governance & Steering:</strong> Coordinating business and technical teams, leading follow-up committees.</li>
+                            <li><strong>Data Analysis & Visualization:</strong> Data exploration (SQL, Python), creating dashboards to support decision-making.</li>
+                            <li><strong>Quality Assurance & Testing:</strong> Executing functional/technical tests, managing UAT, monitoring application RUN.</li>
+                            <li><strong>Automation:</strong> Optimizing business processes via scripts and low-code tools.</li>
+                            <li><strong>Change Management:</strong> User training, technical documentation, and adoption support.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- JOB 2: Freelance -->
-            <section class="card">
-                <div class="job-header">
-                    <h3>Fullstack Developer (Freelance)</h3>
-                    <span class="date">Sep 2020 — Jul 2021</span>
-                </div>
-                <div class="company">Personal Projects</div>
-                <p>Development of technical and creative web projects. Skill building in web technologies (React, Node.js, Python).</p>
-            </section>
-
-            <!-- JOB 3: Thales -->
+            <!-- JOB 2: Thales -->
             <section class="card">
                 <div class="job-header">
                     <h3>Software Engineer</h3>
                     <span class="date">Mar 2020 — Sep 2020</span>
                 </div>
                 <div class="company">Thales</div>
-                <p>Maintenance and optimization of critical software (Java), analysis, design, and development.</p>
+                
+                <div class="job-details">
+                    <p class="context">
+                        <strong>Context:</strong> Multinational specializing in aerospace, defense, and security technologies.
+                    </p>
+                    <p>
+                        <strong>Role:</strong> Software development and maintenance of a network management IT system in Java.
+                    </p>
+                    <div class="tasks-block">
+                        <ul>
+                            <li>Software development (Java/Backend).</li>
+                            <li>Project tracking and reporting.</li>
+                            <li>Writing technical documentation.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
-            <!-- JOB 4: VEDECOM -->
+            <!-- JOB 3: VEDECOM -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Data Analyst</h3>
-                    <span class="date">Jun 2019 — Sep 2019</span>
+                    <h3>Data Engineer | Data Analyst</h3>
+                    <span class="date">Jul 2019 — Sep 2019</span>
                 </div>
-                <div class="company">VEDECOM Tech</div>
-                <p>Data extraction, analysis, and visualization for autonomous vehicles (Python).</p>
+                <div class="company">VEDECOM</div>
+                
+                <div class="job-details">
+                    <p class="context">
+                        <strong>Context:</strong> Institute for Energy Transition dedicated to sustainable, ecological, and automated mobility.
+                    </p>
+                    <p>
+                        <strong>Role:</strong> Responsible for extracting, analyzing, and visualizing data from autonomous vehicles (Shuttle project).
+                    </p>
+                    <div class="tasks-block">
+                        <ul>
+                            <li>Collecting existing data and gathering requirements from teams.</li>
+                            <li>Understanding existing systems from development teams.</li>
+                            <li>Analyzing and processing shuttle data to extract KPIs (Python).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOB 4: YES'N'YOU -->
+            <section class="card">
+                <div class="job-header">
+                    <h3>Assistant Product Manager</h3>
+                    <span class="date">Jan 2018 — Sep 2018</span>
+                </div>
+                <div class="company">YES'N'YOU</div>
+                
+                <div class="job-details">
+                    <p class="context">
+                        <strong>Context:</strong> EdTech company providing innovative training solutions combining tech and modern learning.
+                    </p>
+                    <p>
+                        <strong>Role:</strong> Product management, tracking the roadmap, coordinating cross-functional teams, and user support.
+                    </p>
+                    <div class="tasks-block">
+                        <ul>
+                            <li>Tracking project roadmap and milestones.</li>
+                            <li>Organizing technical support workflows and automating content creation.</li>
+                            <li>Coordinating project follow-up committees.</li>
+                            <li>Gathering requirements from users and stakeholders.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- JOB 5: Captain Train -->
             <section class="card">
                 <div class="job-header">
-                    <h3>Back-End Developer</h3>
-                    <span class="date">Apr 2016 — May 2016</span>
+                    <h3>Backend Developer</h3>
+                    <span class="date">Apr 2016 — Jun 2016</span>
                 </div>
-                <div class="company">CaptainTrain</div>
-                <p>Database optimization and design of a European rail map (RubyOnRails).</p>
+                <div class="company">Captain Train (now Trainline)</div>
+                
+                <div class="job-details">
+                    <p>
+                        <strong>Role:</strong> Improved the database and created a map of the European rail network using PostGIS and OpenStreetMap.
+                    </p>
+                    <div class="tasks-block">
+                        <ul>
+                            <li>Developed backend features (RubyOnRails).</li>
+                            <li>Extracted, cleaned, processed, and visualized geospatial data.</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </section>
 
@@ -157,240 +217,138 @@ import '../styles/global.css';
         <section class="cv-section">
             <h2>Education & Certifications</h2>
             <section class="card">
-                <ul class="simple-list">
-                    <li>
-                        <strong>May 2023:</strong> Mastering Web Quality Assurance (Opquast)
-                    </li>
-                    <li>
-                        <strong>Sep 2022:</strong> Sustainable IT Knowledge Certificate (Institut du Numérique Responsable)
-                    </li>
-                    <li>
-                        <strong>2023:</strong> Certification PSPO I (Scrum.org)
-                    </li>
-                    <li>
-                        <strong>2017 — 2020:</strong> M.Sc. in Software Architecture & Web (University of Montpellier)
-                    </li>
-                    <li>
-                        <strong>2013 — 2016:</strong> B.Sc. in Computer Science (University of Cergy-Pontoise)
-                    </li>
-                </ul>
+                <div class="education-grid">
+                    
+                    <div class="edu-item">
+                        <span class="edu-date">May 2023</span>
+                        <div class="edu-content">
+                            <strong>Mastering Web Quality Assurance</strong>
+                            <span class="edu-school">Opquast</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <span class="edu-date">Sep 2022</span>
+                        <div class="edu-content">
+                            <strong>Sustainable IT Knowledge Certificate</strong>
+                            <span class="edu-school">Institut du Numérique Responsable</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <span class="edu-date">2023</span>
+                        <div class="edu-content">
+                            <strong>Certification PSPO I</strong>
+                            <span class="edu-school">Scrum.org</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <span class="edu-date">2017 — 2020</span>
+                        <div class="edu-content">
+                            <strong>M.Sc. in Software Architecture & Web</strong>
+                            <span class="edu-school">University of Montpellier</span>
+                        </div>
+                    </div>
+
+                    <div class="edu-item">
+                        <span class="edu-date">2013 — 2016</span>
+                        <div class="edu-content">
+                            <strong>B.Sc. in Computer Science</strong>
+                            <span class="edu-school">University of Cergy-Pontoise</span>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </section>
 
         <!-- 4. INTERESTS -->
         <section class="cv-section">
             <h3>Interests</h3>
-            <ul class="interest-list">
-                <li><strong>Tech:</strong> Tool development, automation, and sector watch.</li>
-                <li><strong>Photography:</strong> Amateur practice for 15+ years.</li>
-                <li><strong>Sports:</strong> Running, Archery.</li>
-            </ul>
+            <section class="card">
+                <ul class="interest-list">
+                    <li><strong>Tech:</strong> Tool development, automation, and sector watch.</li>
+                    <li><strong>Photography:</strong> Amateur practice for 15+ years.</li>
+                    <li><strong>Sports:</strong> Running, Archery.</li>
+                </ul>
+            </section>
         </section>
 
     </main>
+
+    <!-- 3. Site Footer -->
+    <Footer />
+
 </body>
 </html>
 
 <!-- SCOPED STYLES -->
 <style>
-    /* Section Spacing */
-    .cv-section {
-        margin-bottom: 3.5rem;
-    }
+    /* 1. Header & Profile */
+    .cv-profile-header { margin-bottom: 2rem; }
+    .role { font-size: 1.3rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+    .contact-info a { color: var(--accent); font-weight: 500; text-decoration: none; word-break: break-all; }
+    .contact-info a:hover { text-decoration: underline; }
+    .status-info { color: #555; font-size: 0.95rem; margin-top: 0.2rem; }
+    .sep { margin: 0 0.5rem; color: #ccc; }
+    .divider { margin: 2rem 0 3rem 0; border: 0; border-top: 1px solid #E5E5E5; }
 
-    /* Navigation */
-    .cv-nav {
-        margin-bottom: 2rem;
-    }
-    .cv-nav a {
-        font-size: 0.9rem;
-        color: #777;
-        transition: color 0.2s ease;
-    }
-    .cv-nav a:hover {
-        /* USE GLOBAL VARIABLE */
-        color: var(--accent); 
-        text-decoration: none;
-    }
+    /* 2. Layout & Spacing */
+    .cv-section { margin-bottom: 4rem; } /* Increased spacing between main sections */
+    .split-section { display: flex; gap: 3rem; }
+    .half-column { flex: 1; }
 
-    /* Header */
-    .cv-header {
-        text-align: left;
-        margin-bottom: 1.5rem;
-    }
+    /* 3. Skills & Lists */
+    .skill-list, .language-list, .interest-list { list-style: none; padding-left: 0; }
+    .skill-list li, .interest-list li { margin-bottom: 0.6rem; color: #333; font-size: 0.95rem; line-height: 1.5; }
     
-    .role {
-        font-size: 1.3rem;
-        /* USE GLOBAL VARIABLE */
-        color: var(--accent); 
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
+    .language-list li { display: flex; flex-direction: column; margin-bottom: 1.2rem; border-left: 3px solid #eee; padding-left: 1rem; }
+    .lang-name { font-weight: 600; color: #333; }
+    .lang-level { font-size: 0.85rem; color: #777; margin-top: 2px; }
 
-    /* Contact Links */
-    .contact-info a {
-        /* USE GLOBAL VARIABLE */
-        color: var(--accent);
-        font-weight: 500;
-        text-decoration: none;
-    }
-    .contact-info a:hover {
-        text-decoration: underline;
-    }
+    /* 4. Experience Cards (The Core) */
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; flex-wrap: wrap; }
+    .job-header h3 { margin-bottom: 0; font-size: 1.15rem; color: #111; margin-right: 1rem; }
+    .date { font-size: 0.85rem; color: #777; font-weight: 500; text-transform: uppercase; text-align: right; white-space: nowrap; }
+    .company { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem; }
 
-    .status-info {
-        color: #555;
-        font-size: 0.95rem;
-        margin-top: 0.2rem;
-    }
-
-    .sep {
-        margin: 0 0.5rem;
-        color: #ccc;
-    }
-
-    /* Skills & Languages (Flexbox Split) */
-    .split-section {
-        display: flex;
-        gap: 3rem;
-    }
+    /* Job Content Layout */
+    .job-details { display: flex; flex-direction: column; gap: 1rem; }
     
-    .half-column {
-        flex: 1;
-    }
-
-    .skill-list, .language-list {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    .skill-list li {
-        margin-bottom: 0.5rem;
-        color: #333;
-        font-size: 0.95rem;
-    }
-
-    /* Languages styling */
-    .language-list li {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
-        border-left: 3px solid #eee;
-        padding-left: 1rem;
-    }
-
-    .lang-name {
-        font-weight: 600;
-        color: #333;
-    }
-
-    .lang-level {
-        font-size: 0.85rem;
-        color: #777;
-        margin-top: 2px;
-    }
-
-    /* Job Cards */
-    .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 0.2rem;
-    }
-
-    .job-header h3 {
-        margin-bottom: 0;
-        font-size: 1.15rem;
-        color: #222;
-    }
-
-    .date {
-        font-size: 0.85rem;
-        color: #777;
-        font-weight: 500;
-        text-transform: uppercase;
-        text-align: right;
-        min-width: 120px;
-    }
-
-    .company {
-        /* USE GLOBAL VARIABLE */
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.95rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .job-intro {
-        margin-bottom: 1.2rem;
-        font-style: italic;
-        color: #555;
-    }
-
-    /* Sub-Jobs */
-    .sub-job {
-        margin-top: 1rem;
-        padding-top: 0.8rem;
-        border-top: 1px dashed #e0e0e0;
-    }
-
-    .sub-job h4 {
-        font-size: 0.95rem;
-        font-weight: 700;
-        margin-bottom: 0.4rem;
-        color: #333;
-    }
-
-    .sub-job p {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .sub-job ul {
-        margin-top: 0.5rem;
-        padding-left: 1.2rem;
-    }
-
-    .sub-job ul li {
-        font-size: 0.9rem;
-        margin-bottom: 0.3rem;
-        color: #444;
-    }
-
-    /* Simple Lists */
-    .simple-list, .interest-list {
-        list-style: none;
-        padding-left: 0;
-    }
+    /* Context & Role Paragraphs */
+    .context, .job-details p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 0; }
     
-    .simple-list li, .interest-list li {
-        margin-bottom: 0.5rem;
-        color: #333;
+    /* Highlight Box (Intrapreneur) */
+    .highlight-box {
+        background-color: #f9f9fa; /* Very subtle grey */
+        border-left: 3px solid var(--accent);
+        padding: 0.8rem;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        margin: 0.5rem 0;
     }
 
-    /* Responsive Mobile */
-    @media (max-width: 600px) {
-        .split-section {
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .job-header {
-            flex-direction: column;
-        }
-        
-        .date {
-            text-align: left;
-            margin-top: 0.2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-info, .status-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-        
+    /* Tasks Section */
+    .tasks-block { margin-top: 0.5rem; }
+    .tasks-label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; color: #111; }
+    .tasks-block ul { padding-left: 1.2rem; margin: 0; }
+    .tasks-block ul li { margin-bottom: 0.5rem; color: #444; font-size: 0.95rem; line-height: 1.6; }
+
+    /* 5. Education Grid */
+    .education-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+    .edu-item { display: flex; gap: 1.5rem; align-items: baseline; }
+    .edu-date { min-width: 100px; font-family: var(--font-mono); font-size: 0.85rem; color: #777; text-align: right; }
+    .edu-school { font-size: 0.9rem; color: #555; }
+
+    /* 6. Responsive */
+    @media (max-width: 768px) {
+        .split-section { flex-direction: column; gap: 2rem; }
+        .job-header { flex-direction: column; }
+        .date { text-align: left; margin-top: 0.2rem; margin-bottom: 0.5rem; white-space: normal; }
+        .edu-item { flex-direction: column; gap: 0.2rem; margin-bottom: 1rem; }
+        .edu-date { text-align: left; color: var(--accent); font-weight: 600; }
+        .contact-info, .status-info { display: flex; flex-direction: column; gap: 0.3rem; }
         .sep { display: none; }
     }
 </style>

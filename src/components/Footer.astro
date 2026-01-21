@@ -1,3 +1,58 @@
-<footer>
-  <p>© 2026 Thomas L. — <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a></p>
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>
+      © {year} Thomas L. 
+      <span class="desktop-sep">—</span> 
+      <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
+    </p>
+  </div>
 </footer>
+
+<style>
+  .site-footer {
+    /* 1. Spacing */
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
+    /* 2. Visual Separation */
+    border-top: 1px solid #E5E5E5;
+  }
+
+  .footer-content {
+    /* 3. Alignment (Matches your Global Layout) */
+    max-width: 750px; 
+    margin: 0 auto;
+    text-align: center;
+    
+    /* 4. Text Styling */
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--accent); /* Uses your Electric Purple */
+    text-decoration: underline;
+  }
+
+  /* 5. Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .desktop-sep {
+      display: none; /* Hide the dash on mobile */
+    }
+
+    p {
+      display: flex;
+      flex-direction: column; /* Stack vertically */
+      gap: 0.5rem;
+    }
+  }
+</style>

@@ -9,33 +9,145 @@ import '../styles/global.css';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Thomas L.</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <Header />
 
     <main>
-      <h2>Selected Projects</h2>
-      
-      <ul>
-        <li>
-          <h3>Green Tech Analysis Tool</h3>
-          <p>Designed a dashboard to visualize renewable energy data. Focused on usability and actionable insights.</p>
-        </li> 
-        <li>
-          <h3>Product Ownership Case Study</h3>
-          <p>Led backlog prioritization for a scale-up, balancing technical feasibility and business value.</p>
-        </li>
-        <li>
-          <h3>Product Ownership Case Study</h3>
-          <p>Led backlog prioritization for a scale-up, balancing technical feasibility and business value.</p>
-        </li>
-        <li>
-          <h3>Small Dev Projects</h3>
-          <p>Python scripts, web tools, and automations demonstrating rapid prototyping and practical coding skills.</p>
-        </li>
-      </ul>
+      <div class="wip-container">
+        
+        <!-- Animated "Loading" Bar -->
+        <div class="loading-bar"></div>
+        
+        <span class="eyebrow">Status: In Development</span>
+        <h1>Projects are loading...</h1>
+        
+        <p>
+          I am currently curating my best Product Ownership case studies and technical projects. 
+          Quality takes time, just like a good backlog refinement.
+        </p>
+
+        <div class="actions">
+          <a href="/" class="btn-primary">Return Home</a>
+          <a href="/cv" class="btn-secondary">View my CV instead</a>
+        </div>
+        
+      </div>
     </main>
 
     <Footer />
   </body>
 </html>
+
+<style>
+  /* Container Layout */
+  .wip-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 650px;
+    margin: 2rem auto 0;
+    background: #fff;
+    border: 1px dashed #E5E5E5;
+    border-radius: 12px;
+  }
+
+  /* Typography */
+  .eyebrow {
+    font-family: var(--font-mono);
+    color: var(--accent); /* Electric Purple */
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #111;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+
+  /* --- BUTTON FIXES --- */
+  .actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Shared Button Styles to ensure equal size */
+  .btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  /* Primary Button (Black) */
+  .btn-primary {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #111;
+  }
+  .btn-primary:hover {
+    background-color: var(--accent); /* Purple Hover */
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  /* Secondary Button (Outline) - FIXED */
+  .btn-secondary {
+    background-color: transparent;
+    color: #111; /* Dark text for visibility */
+    border: 1px solid #E5E5E5; /* Visible border */
+  }
+  .btn-secondary:hover {
+    border-color: #111; /* Darken border on hover */
+    background-color: #FAFAFA;
+    transform: translateY(-2px);
+  }
+
+  /* Loading Bar Animation */
+  .loading-bar {
+    width: 40px;
+    height: 4px;
+    background: var(--accent);
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% { transform: scaleX(0.5); opacity: 0.5; }
+    50% { transform: scaleX(1.5); opacity: 1; }
+    100% { transform: scaleX(0.5); opacity: 0.5; }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    .btn-primary, .btn-secondary {
+      width: 100%; /* Full width buttons on mobile */
+    }
+  }
+</style>
