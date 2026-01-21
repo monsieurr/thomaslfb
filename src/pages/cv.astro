@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Thomas Lefebvre</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your global css file -->
+    <link rel="stylesheet" href="cv.css">    <!-- The specific CV styles below -->
+</head>
+<body>
+
+    <!-- NAV: Simple "Back" link -->
+    <nav class="cv-nav">
+        <a href="index.html" class="btn-ghost">← Back to Portfolio</a>
+        <button class="btn" onclick="window.print()">Download PDF</button>
+    </nav>
+
+    <main class="cv-container">
+        
+        <!-- HEADER -->
+        <header class="cv-header">
+            <h1 class="name">Thomas Lefebvre</h1>
+            <p class="role">Product Owner Data & ESG (PSPO I)</p>
+            
+            <div class="contact-bar">
+                <span>Available in 3 months</span>
+                <span class="separator">/</span>
+                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
+                <span class="separator">/</span>
+                <span>Paris, France</span>
+            </div>
+        </header>
+
+        <!-- GRID LAYOUT -->
+        <div class="cv-grid">
+
+            <!-- LEFT COLUMN: EXPERIENCE -->
+            <section class="experience-section">
+                <span class="eyebrow">Professional Experience</span>
+                
+                <div class="timeline">
+                    
+                    <!-- JOB 1: Mc2i -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="job-header">
+                            <h3>Consultant ESG & Data</h3>
+                            <span class="company">Mc2i</span>
+                            <span class="date">Dec 2021 — Present</span>
+                        </div>
+                        <p class="job-summary">Steering high-impact environmental data products.</p>
+                        
+                        <!-- Sub-Projects (Key for your profile) -->
+                        <div class="sub-projects">
+                            <div class="project">
+                                <h4>Caisse des Dépôts</h4>
+                                <p class="project-role">Technical PO Energy Renovation Tool</p>
+                                <ul>
+                                    <li><strong>Vision:</strong> Built a geo-decisional tool to accelerate social housing thermal renovation.</li>
+                                    <li><strong>Data:</strong> Leveraged energy/GIS data (Python) to prioritize zones.</li>
+                                    <li><strong>Delivery:</strong> Managed backlog, coordinated developers & experts.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project">
+                                <h4>Internal Project</h4>
+                                <p class="project-role">Lead PO "Green Project Score"</p>
+                                <ul>
+                                    <li>Designed an environmental impact calculator for IT projects.</li>
+                                    <li>Defined calculation rules (RGAA, RGESN).</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project">
+                                <h4>Sucden & GRDF</h4>
+                                <ul>
+                                    <li><strong>Sucden:</strong> Data Strategy audit for Sustainable Cocoa supply chain.</li>
+                                    <li><strong>GRDF:</strong> Coordination of IT projects in the energy sector.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JOB 2: Freelance -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="job-header">
+                            <h3>Fullstack Developer</h3>
+                            <span class="company">Freelance</span>
+                            <span class="date">Sep 2020 — Jul 2021</span>
+                        </div>
+                        <p>Web App development (React, Node.js). Implemented software eco-design approaches (Query optimization).</p>
+                    </div>
+
+                    <!-- JOB 3: Thales -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="job-header">
+                            <h3>Software Engineer</h3>
+                            <span class="company">Thales</span>
+                            <span class="date">Mar 2020 — Sep 2020</span>
+                        </div>
+                        <p>Java development. Optimization of critical software for performance and stability.</p>
+                    </div>
+                    
+                    <!-- JOB 4: VEDECOM -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="job-header">
+                            <h3>Data Analyst</h3>
+                            <span class="company">VEDECOM Tech</span>
+                            <span class="date">Jun 2019 — Sep 2019</span>
+                        </div>
+                        <p>Python data analysis for autonomous vehicles (Future Mobility).</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: SKILLS & META -->
+            <aside class="sidebar">
+                
+                <!-- SKILLS -->
+                <div class="sidebar-block">
+                    <span class="eyebrow">Skills</span>
+                    
+                    <div class="skill-group">
+                        <h4>Product & Impact</h4>
+                        <div class="tags">
+                            <span>Agile Scrum</span>
+                            <span>User Stories</span>
+                            <span>Green IT</span>
+                            <span>LCA</span>
+                            <span>Climate Fresk</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h4>Data & Tech</h4>
+                        <div class="tags">
+                            <span>SQL (Adv)</span>
+                            <span>Python</span>
+                            <span>GIS</span>
+                            <span>React</span>
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LANGUAGES -->
+                <div class="sidebar-block">
+                    <span class="eyebrow">Languages</span>
+                    <ul class="simple-list">
+                        <li><strong>French:</strong> Native</li>
+                        <li><strong>English:</strong> Full Prof.</li>
+                        <li><strong>Spanish:</strong> Prof.</li>
+                    </ul>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="sidebar-block">
+                    <span class="eyebrow">Education</span>
+                    <div class="edu-item">
+                        <span class="date">2023</span>
+                        <p><strong>Certification PSPO I</strong><br>Scrum.org</p>
+                    </div>
+                    <div class="edu-item">
+                        <span class="date">2017 — 2020</span>
+                        <p><strong>M.Sc. Software Arch.</strong><br>University of Montpellier</p>
+                    </div>
+                    <div class="edu-item">
+                        <span class="date">2013 — 2016</span>
+                        <p><strong>B.Sc. Computer Science</strong><br>University of Cergy-Pontoise</p>
+                    </div>
+                </div>
+
+                <!-- INTERESTS -->
+                <div class="sidebar-block">
+                    <span class="eyebrow">Interests</span>
+                    <p class="small-text">Green IT Watch, Low-Tech, Photography (15+ years)</p>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
