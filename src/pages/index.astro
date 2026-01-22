@@ -2,27 +2,181 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+const pageTitle = "Thomas L. | Product & Data";
 ---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas L. | Portfolio</title>
+    <title>{pageTitle}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <Header />
-    <main>
-      <h2>Hello, I'm Thomas.</h2>
-      <p>
-        I help build products, bridge tech and business, and create impact in Green Tech and digital transformation.
-      </p>
-      <p>
-        I have experience as a Product Owner, Business Analyst, and developer. I also craft small dev projects and pursue photography on the side.
-      </p>
-      <p>
-        Explore my work and projects below.
-      </p>
+
+    <main class="home-main">
+      <section class="intro-section">
+        <span class="eyebrow">Home</span>
+        <h2>Hello, I'm Thomas.</h2>
+        
+        <div class="bio-content">
+          <p>
+            I am a <strong>Product Manager</strong> specialized in <strong class="highlight">Data, AI, and Sustainability</strong>. 
+            I bridge the gap between technical engineering and business impact to build products that matter in the Green Tech space.
+          </p>
+          <p>
+            With a background as a <strong>Software Engineer</strong>, I bring technical rigor to product discovery and delivery. 
+            Beyond the roadmap, I am an active sustainability advocate—facilitating <em>Climate</em> and <em>Digital</em> workshops—and a <strong>creative soul</strong> with a 15-year passion for photography that fuels my eye for UX/UI.
+          </p>
+        </div>
+
+        <div class="cta-container">
+          <a href="/projects" class="btn-primary">Explore my Work</a>
+          <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank" class="btn-outline">
+            Connect on LinkedIn ↗
+          </a>
+        </div>
+      </section>
     </main>
+
     <Footer />
   </body>
 </html>
+
+<style>
+  /* =========================================
+     1. DESKTOP LOCK (The "No Scroll" Logic)
+     We use :global() to override global.css styles
+     only for this page.
+  ========================================= */
+  @media (min-width: 768px) {
+    /* Lock the screen height */
+    :global(body) {
+      height: 100vh;
+      overflow: hidden; /* This kills the scrollbar */
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Remove the huge global margins that caused the overflow */
+    :global(header) { margin-bottom: 0 !important; }
+    :global(footer) { margin-top: 0 !important; padding-top: 2rem !important; padding-bottom: 2rem !important; }
+    :global(main) { padding: 0 !important; }
+
+    /* Make Main take all available space and center content */
+    .home-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Vertical Center */
+      align-items: center;
+    }
+  }
+
+  /* =========================================
+     2. CONTENT STYLING
+  ========================================= */
+  .intro-section {
+    max-width: 700px;
+    width: 100%;
+    padding: 0 1.5rem;
+    /* On mobile, we keep the margin. On desktop, flex handles it. */
+    margin: 3rem auto 0; 
+  }
+
+  /* Reset margin for desktop since we use Flex centering */
+  @media (min-width: 768px) {
+    .intro-section { margin: 0 auto; }
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    color: #111;
+  }
+
+  .bio-content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight { color: var(--accent); }
+
+  /* =========================================
+     3. BUTTONS
+  ========================================= */
+  .cta-container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .btn-primary, .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    line-height: 1.2;
+  }
+
+  .btn-primary {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #111;
+  }
+  .btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #E5E5E5;
+  }
+  .btn-outline:hover {
+    border-color: #111;
+    background-color: #FAFAFA;
+    transform: translateY(-2px);
+  }
+
+  /* =========================================
+     4. MOBILE RESPONSIVE
+  ========================================= */
+  @media (max-width: 768px) {
+    /* Allow scrolling on mobile */
+    :global(body) { height: auto; overflow: auto; }
+    
+    h2 { font-size: 2.5rem; }
+    
+    .cta-container {
+      flex-direction: column;
+      width: 100%;
+    }
+    .btn-primary, .btn-outline { width: 100%; }
+  }
+</style>

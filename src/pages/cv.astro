@@ -15,15 +15,13 @@ const pageTitle = "CV - Thomas Lefebvre";
 </head>
 <body>
 
-    <!-- 2. Site Header (Navigation) -->
     <Header />
 
     <main>
         
-        <!-- CV HEADER -->
         <header class="cv-profile-header">
             <h1>Thomas Lefebvre</h1>
-            <p class="role">Senior Consultant | Technical Product Owner</p>
+            <p class="role">Senior Data Consultant | Technical Product Owner</p>
             
             <div class="contact-info">
                 <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
@@ -32,15 +30,13 @@ const pageTitle = "CV - Thomas Lefebvre";
             </div>
             
             <div class="status-info">
-                <span>Available in 3 months</span>
                 <span class="sep">•</span>
-                <span>Paris / Ile-de-France</span>
+                <span>Paris / Ile-de-France / France / Europe</span>
             </div>
         </header>
 
         <hr class="divider"/>
 
-        <!-- 1. SKILLS & LANGUAGES -->
         <section class="cv-section split-section">
             <div class="half-column">
                 <h3>Product & Tech Skills</h3>
@@ -76,22 +72,30 @@ const pageTitle = "CV - Thomas Lefebvre";
             </div>
         </section>
 
-        <!-- 2. PROFESSIONAL EXPERIENCE -->
         <section class="cv-section">
             <h2>Professional Experience</h2>
 
-            <!-- JOB 1: Mc2i (Detailed) -->
             <section class="card">
                 <div class="job-header">
                     <h3>Senior Consultant | Technical Product Owner</h3>
                     <span class="date">Dec 2021 — Present</span>
                 </div>
-                <div class="company">Mc2i (Permanent)</div>
+                <div class="company">MC2I</div>
                 
                 <div class="job-details">
                     <p class="context">
-                        <strong>Context:</strong> Mc2i is a digital transformation consulting firm (1500+ employees), focused on high-stakes Data and Innovation projects for major clients (Caisse des Dépôts, Carrefour, Sucden).
+                        <strong>Context:</strong> Mc2i is a digital transformation consulting firm (1500+ employees), focused on high-stakes Data and Innovation projects.
                     </p>
+                    
+                    <div class="client-interventions">
+                        <strong>Interventions for national and international leaders:</strong>
+                        <ul class="client-list">
+                            <li>Major gas distribution operator</li>
+                            <li>Public investment and financing institution</li>
+                            <li>Global retail leader</li>
+                            <li>International agricultural commodities trading group</li>
+                        </ul>
+                    </div>
                     
                     <p>
                         <strong>Role:</strong> Senior Consultant & Product Owner. Operational involvement as a PO and Business Analyst across the full product lifecycle (Discovery to Delivery).
@@ -115,7 +119,6 @@ const pageTitle = "CV - Thomas Lefebvre";
                 </div>
             </section>
 
-            <!-- JOB 2: Thales -->
             <section class="card">
                 <div class="job-header">
                     <h3>Software Engineer</h3>
@@ -140,7 +143,6 @@ const pageTitle = "CV - Thomas Lefebvre";
                 </div>
             </section>
 
-            <!-- JOB 3: VEDECOM -->
             <section class="card">
                 <div class="job-header">
                     <h3>Data Engineer | Data Analyst</h3>
@@ -165,7 +167,6 @@ const pageTitle = "CV - Thomas Lefebvre";
                 </div>
             </section>
 
-            <!-- JOB 4: YES'N'YOU -->
             <section class="card">
                 <div class="job-header">
                     <h3>Assistant Product Manager</h3>
@@ -191,7 +192,6 @@ const pageTitle = "CV - Thomas Lefebvre";
                 </div>
             </section>
 
-            <!-- JOB 5: Captain Train -->
             <section class="card">
                 <div class="job-header">
                     <h3>Backend Developer</h3>
@@ -213,7 +213,6 @@ const pageTitle = "CV - Thomas Lefebvre";
             </section>
         </section>
 
-        <!-- 3. EDUCATION & CERTIFICATIONS -->
         <section class="cv-section">
             <h2>Education & Certifications</h2>
             <section class="card">
@@ -263,7 +262,6 @@ const pageTitle = "CV - Thomas Lefebvre";
             </section>
         </section>
 
-        <!-- 4. INTERESTS -->
         <section class="cv-section">
             <h3>Interests</h3>
             <section class="card">
@@ -277,13 +275,11 @@ const pageTitle = "CV - Thomas Lefebvre";
 
     </main>
 
-    <!-- 3. Site Footer -->
     <Footer />
 
 </body>
 </html>
 
-<!-- SCOPED STYLES -->
 <style>
     /* 1. Header & Profile */
     .cv-profile-header { margin-bottom: 2rem; }
@@ -295,7 +291,7 @@ const pageTitle = "CV - Thomas Lefebvre";
     .divider { margin: 2rem 0 3rem 0; border: 0; border-top: 1px solid #E5E5E5; }
 
     /* 2. Layout & Spacing */
-    .cv-section { margin-bottom: 4rem; } /* Increased spacing between main sections */
+    .cv-section { margin-bottom: 4rem; } 
     .split-section { display: flex; gap: 3rem; }
     .half-column { flex: 1; }
 
@@ -307,21 +303,22 @@ const pageTitle = "CV - Thomas Lefebvre";
     .lang-name { font-weight: 600; color: #333; }
     .lang-level { font-size: 0.85rem; color: #777; margin-top: 2px; }
 
-    /* 4. Experience Cards (The Core) */
+    /* 4. Experience Cards */
     .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; flex-wrap: wrap; }
     .job-header h3 { margin-bottom: 0; font-size: 1.15rem; color: #111; margin-right: 1rem; }
     .date { font-size: 0.85rem; color: #777; font-weight: 500; text-transform: uppercase; text-align: right; white-space: nowrap; }
     .company { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 1.5rem; }
 
-    /* Job Content Layout */
     .job-details { display: flex; flex-direction: column; gap: 1rem; }
-    
-    /* Context & Role Paragraphs */
     .context, .job-details p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 0; }
     
-    /* Highlight Box (Intrapreneur) */
+    /* Client List Styling */
+    .client-interventions { font-size: 0.95rem; color: #444; }
+    .client-list { margin: 0.5rem 0 0 1.2rem; padding: 0; list-style-type: square; }
+    .client-list li { margin-bottom: 0.2rem; }
+
     .highlight-box {
-        background-color: #f9f9fa; /* Very subtle grey */
+        background-color: #f9f9fa;
         border-left: 3px solid var(--accent);
         padding: 0.8rem;
         border-radius: 4px;
@@ -329,7 +326,6 @@ const pageTitle = "CV - Thomas Lefebvre";
         margin: 0.5rem 0;
     }
 
-    /* Tasks Section */
     .tasks-block { margin-top: 0.5rem; }
     .tasks-label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem; color: #111; }
     .tasks-block ul { padding-left: 1.2rem; margin: 0; }

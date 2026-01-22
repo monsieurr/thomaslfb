@@ -14,12 +14,10 @@ import '../styles/global.css';
   <body>
     <Header />
 
-    <main>
+    <main class="projects-main">
       <div class="wip-container">
         
-        <!-- Animated "Loading" Bar -->
         <div class="loading-bar"></div>
-        
         <span class="eyebrow">Status: In Development</span>
         <h1>Projects are loading...</h1>
         
@@ -30,7 +28,7 @@ import '../styles/global.css';
 
         <div class="actions">
           <a href="/" class="btn-primary">Return Home</a>
-          <a href="/cv" class="btn-secondary">View my CV instead</a>
+          <a href="/cv" class="btn-outline">View my CV instead</a>
         </div>
         
       </div>
@@ -41,21 +39,29 @@ import '../styles/global.css';
 </html>
 
 <style>
-  /* Container Layout */
+  /* 
+     Center the WIP box vertically 
+     (Relies on global.css having main { flex: 1; }) 
+  */
+  .projects-main {
+    justify-content: center; 
+    padding-bottom: 4rem;
+  }
+
   .wip-container {
     text-align: center;
     padding: 4rem 2rem;
     max-width: 650px;
-    margin: 2rem auto 0;
+    margin: 0 auto; /* Center horizontally */
     background: #fff;
     border: 1px dashed #E5E5E5;
     border-radius: 12px;
+    width: 90%; /* Responsive width */
   }
 
-  /* Typography */
   .eyebrow {
     font-family: var(--font-mono);
-    color: var(--accent); /* Electric Purple */
+    color: var(--accent);
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -78,7 +84,7 @@ import '../styles/global.css';
     font-size: 1.05rem;
   }
 
-  /* --- BUTTON FIXES --- */
+  /* Buttons */
   .actions {
     display: flex;
     gap: 1rem;
@@ -86,8 +92,7 @@ import '../styles/global.css';
     align-items: center;
   }
 
-  /* Shared Button Styles to ensure equal size */
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -98,33 +103,32 @@ import '../styles/global.css';
     text-decoration: none;
     transition: all 0.2s ease;
     cursor: pointer;
+    min-width: 140px;
   }
 
-  /* Primary Button (Black) */
   .btn-primary {
     background-color: #111;
     color: #fff;
     border: 1px solid #111;
   }
   .btn-primary:hover {
-    background-color: var(--accent); /* Purple Hover */
+    background-color: var(--accent);
     border-color: var(--accent);
     transform: translateY(-2px);
   }
 
-  /* Secondary Button (Outline) - FIXED */
-  .btn-secondary {
+  .btn-outline {
     background-color: transparent;
-    color: #111; /* Dark text for visibility */
-    border: 1px solid #E5E5E5; /* Visible border */
+    color: #111;
+    border: 1px solid #E5E5E5;
   }
-  .btn-secondary:hover {
-    border-color: #111; /* Darken border on hover */
+  .btn-outline:hover {
+    border-color: #111;
     background-color: #FAFAFA;
     transform: translateY(-2px);
   }
 
-  /* Loading Bar Animation */
+  /* Animation */
   .loading-bar {
     width: 40px;
     height: 4px;
@@ -140,14 +144,13 @@ import '../styles/global.css';
     100% { transform: scaleX(0.5); opacity: 0.5; }
   }
 
-  /* Mobile responsiveness */
   @media (max-width: 600px) {
     .actions {
       flex-direction: column;
       width: 100%;
     }
-    .btn-primary, .btn-secondary {
-      width: 100%; /* Full width buttons on mobile */
+    .btn-primary, .btn-outline {
+      width: 100%;
     }
   }
 </style>

@@ -14,9 +14,9 @@
   --text-muted: #737373;
   --border: #E5E5E5;
   
-  /* THE NEW ACCENT COLOR */
-  --accent: #6600FF;  /* <--- The Electric Purple from your image */
-  --accent-glow: rgba(102, 0, 255, 0.15); /* A soft glow matching the purple */
+  /* THE ACCENT: Electric Purple */
+  --accent: #6600FF;
+  --accent-glow: rgba(102, 0, 255, 0.15);
 
   /* Spacing & Feel */
   --radius: 8px;
@@ -35,6 +35,11 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  
+  /* STICKY FOOTER SETUP */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* THE UNIQUE TOUCH: Custom Selection Color */
@@ -96,24 +101,26 @@ p {
 }
 
 /* ======================
-   4. LINKS & INTERACTIONS
-   Moving away from standard underlines to "creative" hovers.
+4. LINKS & INTERACTIONS
 ====================== */
 a {
   color: var(--text-main);
   text-decoration: none;
+  
+  /* The underline is technically a background gradient */
   background-image: linear-gradient(var(--accent), var(--accent));
-  background-size: 0% 2px;
+  background-size: 0% 2px; /* Hidden by default (0% width) */
   background-repeat: no-repeat;
   background-position: left bottom;
+  
+  /* We animate both the underline expansion (background-size) AND the text color */
   transition: background-size 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 a:hover {
-  background-size: 100% 2px;
-  color: var(--accent);
+  background-size: 100% 2px; /* Underline expands to full width */
+  color: var(--accent);      /* Text turns Electric Purple */
 }
-
 /* ======================
    5. LAYOUT
 ====================== */
@@ -121,6 +128,12 @@ main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 5rem 2rem;
+  
+  /* Pushes footer down & allows vertical centering if needed */
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
