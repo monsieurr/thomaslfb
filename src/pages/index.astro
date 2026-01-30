@@ -1,49 +1,32 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Thomas L. | Product & Data";
 ---
+<BaseLayout title={pageTitle}>
+  <section class="intro-section">
+    <span class="eyebrow">Home</span>
+    <h2>Hello, I'm Thomas.</h2>
+    
+    <div class="bio-content">
+      <p>
+        I am a <strong>Product Manager</strong> specialized in <strong class="highlight">Data, AI, and Sustainability</strong>. 
+        I bridge the gap between technical engineering and business impact to build products that matter in the Green Tech space.
+      </p>
+      <p>
+        With a background as a <strong>Software Engineer</strong>, I bring technical rigor to product discovery and delivery. 
+        Beyond the roadmap, I am an active sustainability advocate—facilitating <em>Climate</em> and <em>Digital</em> workshops—and a <strong>creative soul</strong> with a 15-year passion for photography that fuels my eye for UX/UI.
+      </p>
+    </div>
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  </head>
-  <body>
-    <Header />
-
-    <main class="home-main">
-      <section class="intro-section">
-        <span class="eyebrow">Home</span>
-        <h2>Hello, I'm Thomas.</h2>
-        
-        <div class="bio-content">
-          <p>
-            I am a <strong>Product Manager</strong> specialized in <strong class="highlight">Data, AI, and Sustainability</strong>. 
-            I bridge the gap between technical engineering and business impact to build products that matter in the Green Tech space.
-          </p>
-          <p>
-            With a background as a <strong>Software Engineer</strong>, I bring technical rigor to product discovery and delivery. 
-            Beyond the roadmap, I am an active sustainability advocate—facilitating <em>Climate</em> and <em>Digital</em> workshops—and a <strong>creative soul</strong> with a 15-year passion for photography that fuels my eye for UX/UI.
-          </p>
-        </div>
-
-        <div class="cta-container">
-          <a href="/projects" class="btn-primary">Explore my Work</a>
-          <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank" class="btn-outline">
-            Connect on LinkedIn ↗
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+    <div class="cta-container">
+      <!-- These now use the global button styles -->
+      <a href="/projects" class="btn">Explore my Work</a>
+      <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank" class="btn btn-ghost">
+        Connect on LinkedIn ↗
+      </a>
+    </div>
+  </section>
+</BaseLayout>
 
 <style>
   /* =========================================

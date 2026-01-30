@@ -1,0 +1,42 @@
+---
+// Import components that appear on every page
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+// This allows you to pass a title to the layout from any page
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The page title is now dynamic -->
+    <title>{title}</title>
+
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Proper Font Loading from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <Header />
+    
+    <!-- The <slot /> is where your page-specific content will be injected -->
+    <main>
+        <slot />
+    </main>
+    
+    <Footer />
+</body>
+</html>

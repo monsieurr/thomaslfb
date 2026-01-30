@@ -1,284 +1,275 @@
 ---
-// 1. Import Components
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "CV - Thomas Lefebvre";
 ---
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-</head>
-<body>
-
-    <Header />
-
-    <main>
+<BaseLayout title={pageTitle}>
+    <header class="cv-profile-header">
+        <h1>Thomas Lefebvre</h1>
+        <p class="role">Senior Data Consultant | Technical Product Manager</p>
         
-        <header class="cv-profile-header">
-            <h1>Thomas Lefebvre</h1>
-            <p class="role">Senior Data Consultant | Technical Product Owner</p>
-            
-            <div class="contact-info">
-                <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
-                <span class="sep">•</span>
-                <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank">LinkedIn Profile</a>
-            </div>
-            
-            <div class="status-info">
-                <span class="sep">•</span>
-                <span>Paris / Ile-de-France / France / Europe</span>
-            </div>
-        </header>
+        <div class="contact-info">
+            <a href="mailto:thomas.lfbvr@gmail.com">thomas.lfbvr@gmail.com</a>
+            <span class="sep">•</span>
+            <a href="https://www.linkedin.com/in/thomas-lefebvre-tech/" target="_blank">LinkedIn Profile</a>
+        </div>
+        
+        <div class="status-info">
+            <span class="sep">•</span>
+            <span>Paris / Ile-de-France / France / Europe</span>
+        </div>
+    </header>
 
-        <hr class="divider"/>
+    <hr class="divider"/>
 
-        <section class="cv-section split-section">
-            <div class="half-column">
-                <h3>Product & Tech Skills</h3>
+    <section class="cv-section split-section">
+        <!-- LEFT COLUMN: Contains both skill groups -->
+        <div class="half-column">
+            
+            <div class="skills-group">
+                <h3>Product Management</h3>
                 <ul class="skill-list">
-                    <li><strong>Methods:</strong> Agile Scrum, Discovery, V-Model</li>
-                    <li><strong>Practice:</strong> User Stories, Prioritization, UAT</li>
-                    <li><strong>Tools:</strong> Jira, Confluence, Notion, Figma</li>
-                    <li><strong>Data:</strong> SQL (Advanced), Python (Pandas), Excel</li>
-                    <li><strong>Dev:</strong> Git, Docker, API Rest, HTML/JS</li>
+                    <li><strong>Methodologies:</strong> Agile Methodologies, Scrum, Product Discovery</li>
+                    <li><strong>Core Practices:</strong> User Stories, Roadmapping, Backlog Prioritization, UAT</li>
+                    <li><strong>Governance:</strong> Stakeholder and Change Management</li>
+                    <li><strong>Product Stack:</strong> Jira, Confluence, Notion, Figma, Trello</li>
+                </ul>
+            </div>
+            
+            <div class="skills-group">
+                <h3>Technical Skills</h3>
+                <ul class="skill-list">
+                    <li><strong>Data Analysis:</strong> SQL, Python, Excel, Power BI, Databricks</li>
+                    <li><strong>Development:</strong> Git, Docker, APIs, HTML/JS</li>
                 </ul>
             </div>
 
-            <div class="half-column">
-                <h3>Languages</h3>
-                <ul class="language-list">
-                    <li>
-                        <span class="lang-name">French</span>
-                        <span class="lang-level">Native or bilingual proficiency</span>
-                    </li>
-                    <li>
-                        <span class="lang-name">English</span>
-                        <span class="lang-level">Full professional proficiency</span>
-                    </li>
-                    <li>
-                        <span class="lang-name">Spanish</span>
-                        <span class="lang-level">Professional working proficiency</span>
-                    </li>
-                    <li>
-                        <span class="lang-name">Italian</span>
-                        <span class="lang-level">Elementary proficiency</span>
-                    </li>
-                </ul>
+        </div>
+
+        <!-- RIGHT COLUMN: Contains only languages -->
+        <div class="half-column">
+            <h3>Languages</h3>
+            <ul class="language-list">
+                <li>
+                    <span class="lang-name">French</span>
+                    <span class="lang-level">Native or bilingual proficiency</span>
+                </li>
+                <li>
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Full professional proficiency</span>
+                </li>
+                <li>
+                    <span class="lang-name">Spanish</span>
+                    <span class="lang-level">Professional working proficiency</span>
+                </li>
+                <li>
+                    <span class="lang-name">Italian</span>
+                    <span class="lang-level">Elementary proficiency</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cv-section">
+        <h2>Professional Experience</h2>
+
+        <article class="card">
+            <div class="job-header">
+                <h3>Senior Consultant | Technical Product Owner</h3>
+                <time class="date" datetime="2021-12">Dec 2021 — Present</time>
             </div>
-        </section>
-
-        <section class="cv-section">
-            <h2>Professional Experience</h2>
-
-            <section class="card">
-                <div class="job-header">
-                    <h3>Senior Consultant | Technical Product Owner</h3>
-                    <span class="date">Dec 2021 — Present</span>
-                </div>
-                <div class="company">MC2I</div>
+            <div class="company">MC2I</div>
+            
+            <div class="job-details">
+                <p class="context">
+                    <strong>Context:</strong> Mc2i is a digital transformation consulting firm (1500+ employees), focused on high-stakes Data and Innovation projects.
+                </p>
                 
-                <div class="job-details">
-                    <p class="context">
-                        <strong>Context:</strong> Mc2i is a digital transformation consulting firm (1500+ employees), focused on high-stakes Data and Innovation projects.
-                    </p>
-                    
-                    <div class="client-interventions">
-                        <strong>Interventions for national and international leaders:</strong>
-                        <ul class="client-list">
-                            <li>Major gas distribution operator</li>
-                            <li>Public investment and financing institution</li>
-                            <li>Global retail leader</li>
-                            <li>International agricultural commodities trading group</li>
-                        </ul>
-                    </div>
-                    
-                    <p>
-                        <strong>Role:</strong> Senior Consultant & Product Owner. Operational involvement as a PO and Business Analyst across the full product lifecycle (Discovery to Delivery).
-                    </p>
-
-                    <p class="highlight-box">
-                        <strong>Intrapreneurial role:</strong> Contributor on the "Green Project Score" (Responsible Digital assessment tool) and member of the Data & AI club (AI Act training, benchmarks).
-                    </p>
-
-                    <div class="tasks-block">
-                        <span class="tasks-label">Key Tasks:</span>
-                        <ul>
-                            <li><strong>Product Management & Methodology:</strong> Managing and prioritizing backlog by value, writing functional specs and User Stories.</li>
-                            <li><strong>Governance & Steering:</strong> Coordinating business and technical teams, leading follow-up committees.</li>
-                            <li><strong>Data Analysis & Visualization:</strong> Data exploration (SQL, Python), creating dashboards to support decision-making.</li>
-                            <li><strong>Quality Assurance & Testing:</strong> Executing functional/technical tests, managing UAT, monitoring application RUN.</li>
-                            <li><strong>Automation:</strong> Optimizing business processes via scripts and low-code tools.</li>
-                            <li><strong>Change Management:</strong> User training, technical documentation, and adoption support.</li>
-                        </ul>
-                    </div>
+                <div class="client-interventions">
+                    <strong>Interventions for national and international leaders:</strong>
+                    <ul class="client-list">
+                        <li>Major gas distribution operator</li>
+                        <li>Public investment and financing institution</li>
+                        <li>Global retail leader</li>
+                        <li>International agricultural commodities trading group</li>
+                    </ul>
                 </div>
-            </section>
-
-            <section class="card">
-                <div class="job-header">
-                    <h3>Software Engineer</h3>
-                    <span class="date">Mar 2020 — Sep 2020</span>
-                </div>
-                <div class="company">Thales</div>
                 
-                <div class="job-details">
-                    <p class="context">
-                        <strong>Context:</strong> Multinational specializing in aerospace, defense, and security technologies.
-                    </p>
-                    <p>
-                        <strong>Role:</strong> Software development and maintenance of a network management IT system in Java.
-                    </p>
-                    <div class="tasks-block">
-                        <ul>
-                            <li>Software development (Java/Backend).</li>
-                            <li>Project tracking and reporting.</li>
-                            <li>Writing technical documentation.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                <p>
+                    <strong>Role:</strong> Senior Consultant & Product Manager. Operational involvement as a PO and Business Analyst across the full product lifecycle (Discovery to Delivery).
+                </p>
 
-            <section class="card">
-                <div class="job-header">
-                    <h3>Data Engineer | Data Analyst</h3>
-                    <span class="date">Jul 2019 — Sep 2019</span>
+                <p class="highlight-box">
+                    <strong>Intrapreneurial role:</strong> Contributor on the "Green Project Score" (Responsible Digital assessment tool) and member of the Data & AI club (AI Act training, benchmarks).
+                </p>
+
+                <div class="tasks-block">
+                    <span class="tasks-label">Key Tasks:</span>
+                    <ul>
+                        <li><strong>Product Management & Methodology:</strong> Managing and prioritizing backlog by value, writing functional specs and User Stories.</li>
+                        <li><strong>Governance & Steering:</strong> Coordinating business and technical teams, leading follow-up committees.</li>
+                        <li><strong>Data Analysis & Visualization:</strong> Data exploration (SQL, Python), creating dashboards to support decision-making.</li>
+                        <li><strong>Quality Assurance & Testing:</strong> Executing functional/technical tests, managing UAT, monitoring application RUN.</li>
+                        <li><strong>Automation:</strong> Optimizing business processes via scripts and low-code tools.</li>
+                        <li><strong>Change Management:</strong> User training, technical documentation, and adoption support.</li>
+                    </ul>
                 </div>
-                <div class="company">VEDECOM</div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="job-header">
+                <h3>Software Engineer</h3>
+                <time class="date" datetime="2020-03">Mar 2020 — Sep 2020</time>
+            </div>
+            <div class="company">Thales</div>
+            
+            <div class="job-details">
+                <p class="context">
+                    <strong>Context:</strong> Multinational specializing in aerospace, defense, and security technologies.
+                </p>
+                <p>
+                    <strong>Role:</strong> Software development and maintenance of a network management IT system in Java.
+                </p>
+                <div class="tasks-block">
+                    <ul>
+                        <li>Software development (Java/Backend).</li>
+                        <li>Project tracking and reporting.</li>
+                        <li>Writing technical documentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="job-header">
+                <h3>Data Engineer | Data Analyst</h3>
+                <time class="date" datetime="2019-07">Jul 2019 — Sep 2019</time>
+            </div>
+            <div class="company">VEDECOM</div>
+            
+            <div class="job-details">
+                <p class="context">
+                    <strong>Context:</strong> Institute for Energy Transition dedicated to sustainable, ecological, and automated mobility.
+                </p>
+                <p>
+                    <strong>Role:</strong> Responsible for extracting, analyzing, and visualizing data from autonomous vehicles (Shuttle project).
+                </p>
+                <div class="tasks-block">
+                    <ul>
+                        <li>Collecting existing data and gathering requirements from teams.</li>
+                        <li>Understanding existing systems from development teams.</li>
+                        <li>Analyzing and processing shuttle data to extract KPIs (Python).</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="job-header">
+                <h3>Assistant Product Manager</h3>
+                <time class="date" datetime="2018-01">Jan 2018 — Sep 2018</time>
+            </div>
+            <div class="company">YES'N'YOU</div>
+            
+            <div class="job-details">
+                <p class="context">
+                    <strong>Context:</strong> EdTech company providing innovative training solutions combining tech and modern learning.
+                </p>
+                <p>
+                    <strong>Role:</strong> Product management, tracking the roadmap, coordinating cross-functional teams, and user support.
+                </p>
+                <div class="tasks-block">
+                    <ul>
+                        <li>Tracking project roadmap and milestones.</li>
+                        <li>Organizing technical support workflows and automating content creation.</li>
+                        <li>Coordinating project follow-up committees.</li>
+                        <li>Gathering requirements from users and stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="job-header">
+                <h3>Backend Developer</h3>
+                <time class="date" datetime="2016-04">Apr 2016 — Jun 2016</time>
+            </div>
+            <div class="company">Captain Train (now Trainline)</div>
+            
+            <div class="job-details">
+                <p>
+                    <strong>Role:</strong> Improved the database and created a map of the European rail network using PostGIS and OpenStreetMap.
+                </p>
+                <div class="tasks-block">
+                    <ul>
+                        <li>Developed backend features (RubyOnRails).</li>
+                        <li>Extracted, cleaned, processed, and visualized geospatial data.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="cv-section">
+        <h2>Education & Certifications</h2>
+        <div class="card">
+            <div class="education-grid">
                 
-                <div class="job-details">
-                    <p class="context">
-                        <strong>Context:</strong> Institute for Energy Transition dedicated to sustainable, ecological, and automated mobility.
-                    </p>
-                    <p>
-                        <strong>Role:</strong> Responsible for extracting, analyzing, and visualizing data from autonomous vehicles (Shuttle project).
-                    </p>
-                    <div class="tasks-block">
-                        <ul>
-                            <li>Collecting existing data and gathering requirements from teams.</li>
-                            <li>Understanding existing systems from development teams.</li>
-                            <li>Analyzing and processing shuttle data to extract KPIs (Python).</li>
-                        </ul>
+                <div class="edu-item">
+                    <span class="edu-date">May 2023</span>
+                    <div class="edu-content">
+                        <strong>Mastering Web Quality Assurance</strong>
+                        <span class="edu-school">Opquast</span>
                     </div>
                 </div>
-            </section>
 
-            <section class="card">
-                <div class="job-header">
-                    <h3>Assistant Product Manager</h3>
-                    <span class="date">Jan 2018 — Sep 2018</span>
-                </div>
-                <div class="company">YES'N'YOU</div>
-                
-                <div class="job-details">
-                    <p class="context">
-                        <strong>Context:</strong> EdTech company providing innovative training solutions combining tech and modern learning.
-                    </p>
-                    <p>
-                        <strong>Role:</strong> Product management, tracking the roadmap, coordinating cross-functional teams, and user support.
-                    </p>
-                    <div class="tasks-block">
-                        <ul>
-                            <li>Tracking project roadmap and milestones.</li>
-                            <li>Organizing technical support workflows and automating content creation.</li>
-                            <li>Coordinating project follow-up committees.</li>
-                            <li>Gathering requirements from users and stakeholders.</li>
-                        </ul>
+                <div class="edu-item">
+                    <span class="edu-date">Sep 2022</span>
+                    <div class="edu-content">
+                        <strong>Sustainable IT Knowledge Certificate</strong>
+                        <span class="edu-school">Institut du Numérique Responsable</span>
                     </div>
                 </div>
-            </section>
 
-            <section class="card">
-                <div class="job-header">
-                    <h3>Backend Developer</h3>
-                    <span class="date">Apr 2016 — Jun 2016</span>
-                </div>
-                <div class="company">Captain Train (now Trainline)</div>
-                
-                <div class="job-details">
-                    <p>
-                        <strong>Role:</strong> Improved the database and created a map of the European rail network using PostGIS and OpenStreetMap.
-                    </p>
-                    <div class="tasks-block">
-                        <ul>
-                            <li>Developed backend features (RubyOnRails).</li>
-                            <li>Extracted, cleaned, processed, and visualized geospatial data.</li>
-                        </ul>
+                <div class="edu-item">
+                    <span class="edu-date">2023</span>
+                    <div class="edu-content">
+                        <strong>Certification PSPO I</strong>
+                        <span class="edu-school">Scrum.org</span>
                     </div>
                 </div>
-            </section>
-        </section>
 
-        <section class="cv-section">
-            <h2>Education & Certifications</h2>
-            <section class="card">
-                <div class="education-grid">
-                    
-                    <div class="edu-item">
-                        <span class="edu-date">May 2023</span>
-                        <div class="edu-content">
-                            <strong>Mastering Web Quality Assurance</strong>
-                            <span class="edu-school">Opquast</span>
-                        </div>
+                <div class="edu-item">
+                    <span class="edu-date">2017 — 2020</span>
+                    <div class="edu-content">
+                        <strong>M.Sc. in Software Architecture & Web</strong>
+                        <span class="edu-school">University of Montpellier</span>
                     </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">Sep 2022</span>
-                        <div class="edu-content">
-                            <strong>Sustainable IT Knowledge Certificate</strong>
-                            <span class="edu-school">Institut du Numérique Responsable</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">2023</span>
-                        <div class="edu-content">
-                            <strong>Certification PSPO I</strong>
-                            <span class="edu-school">Scrum.org</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">2017 — 2020</span>
-                        <div class="edu-content">
-                            <strong>M.Sc. in Software Architecture & Web</strong>
-                            <span class="edu-school">University of Montpellier</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">2013 — 2016</span>
-                        <div class="edu-content">
-                            <strong>B.Sc. in Computer Science</strong>
-                            <span class="edu-school">University of Cergy-Pontoise</span>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
-        </section>
 
-        <section class="cv-section">
-            <h3>Interests</h3>
-            <section class="card">
-                <ul class="interest-list">
-                    <li><strong>Tech:</strong> Tool development, automation, and sector watch.</li>
-                    <li><strong>Photography:</strong> Amateur practice for 15+ years.</li>
-                    <li><strong>Sports:</strong> Running, Archery.</li>
-                </ul>
-            </section>
-        </section>
+                <div class="edu-item">
+                    <span class="edu-date">2013 — 2016</span>
+                    <div class="edu-content">
+                        <strong>B.Sc. in Computer Science</strong>
+                        <span class="edu-school">University of Cergy-Pontoise</span>
+                    </div>
+                </div>
 
-    </main>
+            </div>
+        </div>
+    </section>
 
-    <Footer />
-
-</body>
-</html>
+    <section class="cv-section">
+        <h3>Interests</h3>
+        <div class="card">
+            <ul class="interest-list">
+                <li><strong>Tech:</strong> Tool development, automation, and sector watch.</li>
+                <li><strong>Photography:</strong> Amateur practice for 15+ years.</li>
+                <li><strong>Sports:</strong> Running, Archery.</li>
+            </ul>
+        </div>
+    </section>
+</BaseLayout>
 
 <style>
     /* 1. Header & Profile */
@@ -291,17 +282,25 @@ const pageTitle = "CV - Thomas Lefebvre";
     .divider { margin: 2rem 0 3rem 0; border: 0; border-top: 1px solid #E5E5E5; }
 
     /* 2. Layout & Spacing */
-    .cv-section { margin-bottom: 4rem; } 
+    .cv-section { margin-bottom: 3rem; } 
+    .cv-section h2 { margin-top: 0; }
     .split-section { display: flex; gap: 3rem; }
     .half-column { flex: 1; }
 
     /* 3. Skills & Lists */
+    .skills-group { margin-bottom: 2.5rem; }
+    .skills-group:last-child { margin-bottom: 0; }
+    .half-column h3 { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    
     .skill-list, .language-list, .interest-list { list-style: none; padding-left: 0; }
-    .skill-list li, .interest-list li { margin-bottom: 0.6rem; color: #333; font-size: 0.95rem; line-height: 1.5; }
+    .skill-list li { margin-bottom: 0.8rem; color: #333; font-size: 0.95rem; line-height: 1.6; }
+    .skill-list li strong { color: #111; }
     
     .language-list li { display: flex; flex-direction: column; margin-bottom: 1.2rem; border-left: 3px solid #eee; padding-left: 1rem; }
     .lang-name { font-weight: 600; color: #333; }
     .lang-level { font-size: 0.85rem; color: #777; margin-top: 2px; }
+
+    .interest-list li { margin-bottom: 0.6rem; }
 
     /* 4. Experience Cards */
     .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; flex-wrap: wrap; }
@@ -312,7 +311,6 @@ const pageTitle = "CV - Thomas Lefebvre";
     .job-details { display: flex; flex-direction: column; gap: 1rem; }
     .context, .job-details p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 0; }
     
-    /* Client List Styling */
     .client-interventions { font-size: 0.95rem; color: #444; }
     .client-list { margin: 0.5rem 0 0 1.2rem; padding: 0; list-style-type: square; }
     .client-list li { margin-bottom: 0.2rem; }
@@ -339,7 +337,8 @@ const pageTitle = "CV - Thomas Lefebvre";
 
     /* 6. Responsive */
     @media (max-width: 768px) {
-        .split-section { flex-direction: column; gap: 2rem; }
+        .split-section { flex-direction: column; gap: 0rem; }
+        .half-column { margin-bottom: 2rem; }
         .job-header { flex-direction: column; }
         .date { text-align: left; margin-top: 0.2rem; margin-bottom: 0.5rem; white-space: normal; }
         .edu-item { flex-direction: column; gap: 0.2rem; margin-bottom: 1rem; }
