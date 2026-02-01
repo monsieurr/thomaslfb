@@ -148,7 +148,7 @@ a:hover {
 main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 1rem 2rem;
   
   /* Pushes footer down & allows vertical centering if needed */
   flex: 1;
