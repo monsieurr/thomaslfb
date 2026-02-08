@@ -1,0 +1,144 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title}>
+  <article class="prose-container">
+    
+    <!-- Header: Clean Title & Description only -->
+    <header class="post-header">
+      <h1>{frontmatter.title}</h1>
+      <p class="lead">{frontmatter.description}</p>
+      
+      {/* Only showing contextual tags for Articles if they exist, not Tech Stacks */}
+      {frontmatter.tags && (
+        <div class="tags-container">
+          {frontmatter.tags.map((t: string) => <span class="tag">#{t}</span>)}
+        </div>
+      )}
+      
+      <hr class="divider" />
+    </header>
+
+    <!-- Content -->
+    <div class="prose">
+      <slot />
+    </div>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .prose-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+  }
+
+  .post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+
+  .tags-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: #f4f4f5;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    color: var(--text-main);
+  }
+
+  .divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin-top: 2.5rem;
+  }
+
+  /* Typography for Markdown Content */
+  .prose :global(h2) {
+    margin-top: 2.5rem;
+    font-size: 1.8rem;
+    border-bottom: 0; /* Clean look */
+  }
+  
+  .prose :global(h3) {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: var(--text-main);
+  }
+
+  .prose :global(p) {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .prose :global(a) {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  
+  /* Lists */
+  .prose :global(ul), .prose :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: #333;
+  }
+  .prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Images */
+  .prose :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: 2rem 0;
+    display: block;
+  }
+  
+  /* Quotes */
+  .prose :global(blockquote) {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 2rem 0;
+    background: #FAFAFA;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Code Blocks */
+  .prose :global(pre) {
+    background: #111;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin-bottom: 2rem;
+  }
+</style>

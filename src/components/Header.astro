@@ -21,10 +21,12 @@ const currentPath = pathname.slice(1); // remove the first "/"
           <a href="/projects" class={currentPath.startsWith("projects") ? "active" : ""}>Projects</a>
         </li>
         <li>
+          <a href="/articles" class={currentPath.startsWith("articles") ? "active" : ""}>Articles</a>
+        </li>
+        <li>
           <a href="/cv" class={currentPath.startsWith("cv") ? "active" : ""}>CV</a>
         </li>
-        <!-- Uncomment this later when you are ready -->
-        <!-- <li><a href="/articles">Articles</a></li> -->
+
       </ul>
     </nav>
 

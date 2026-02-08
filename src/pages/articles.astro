@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+
+const pageTitle = "Writing | Thomas Lefebvre";
+const allArticles = await getCollection("articles", ({ data }) => !data.isDraft);
+const sortedArticles = allArticles.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<BaseLayout title={pageTitle}>
+  <section>
+    <span class="eyebrow">Thoughts & Insights</span>
+    <h1>Articles</h1>
+    <p>Thoughts on Product Management, Sustainability, and the process of building things.</p>
+    
+    <div class="articles-list">
+      {sortedArticles.map((article) => (
+        <a href={`/articles/${article.slug}`} class="article-item">
+          <div class="article-content">
+            <h3>{article.data.title}</h3>
+            <p class="description">{article.data.description}</p>
+            
+            {article.data.tags && (
+              <div class="tags">
+                 {article.data.tags.slice(0, 3).map(tag => <span>#{tag}</span>)}
+              </div>
+            )}
+          </div>
+        </a>
+                  <div class="loading-bar"></div>
+
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .article-item {
+    display: block;
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all 0.2s var(--ease);
+    text-decoration: none;
+    background-image: none;
+  }
+
+  .article-item:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px var(--accent-glow);
+  }
+
+  .article-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--text-main);
+  }
+
+  .description {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .tags {
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+  }
+  
+  .tags span {
+    margin-right: 0.8rem;
+  }
+
+  /* Animation */
+  .loading-bar {
+    width: 40px;
+    height: 4px;
+    background: var(--accent);
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% { transform: scaleX(0.5); opacity: 0.5; }
+    50% { transform: scaleX(1.5); opacity: 1; }
+    100% { transform: scaleX(0.5); opacity: 0.5; }
+  }
+
+  @media (max-width: 600px) {
+    .actions {
+      flex-direction: column;
+      width: 100%;
+    }
+    .btn-primary, .btn-outline {
+      width: 100%;
+    }
+  }
+</style>
