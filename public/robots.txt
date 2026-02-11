@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thomaslfb.eu/sitemap-index.xml
+Sitemap: https://www.thomaslfb.eu/sitemap-index.xml
