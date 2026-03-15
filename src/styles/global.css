@@ -155,9 +155,6 @@ main {
   width: 100%;
 }
 
-header {
-  margin-bottom: 4rem;
-}
 
 /* The Grid */
 .grid-bento {
@@ -263,14 +260,4 @@ header {
 .highlight {
   color: var(--accent);
   font-weight: 600;
-}
-
-footer {
-  margin-top: 8rem;
-  border-top: 1px solid var(--border);
-  padding-top: 2rem;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  display: flex;
-  justify-content: space-between;
 }
