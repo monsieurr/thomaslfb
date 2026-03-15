@@ -7,9 +7,17 @@ import '../styles/global.css';
 // This allows you to pass a title to the layout from any page
 export interface Props {
 	title: string;
+	description?: string;
+	ogImage?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Thomas Lefebvre — Product Manager working at the intersection of data, ESG, AI, and regulations.",
+  ogImage,
+} = Astro.props;
+
+const canonicalUrl = Astro.url?.toString();
 ---
 
 <!DOCTYPE html>
@@ -23,6 +31,19 @@ const { title } = Astro.props;
 
     <!-- Favicon Link -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <!-- SEO / Social -->
+    <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
 
     <!-- Proper Font Loading from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

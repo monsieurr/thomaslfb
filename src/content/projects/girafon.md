@@ -32,6 +32,14 @@ Manual ESRS checks are slow and inconsistent, which increases compliance risk an
 ## Solution
 A report analysis flow that maps report content to ESRS requirements and highlights missing or weak coverage.
 
+## My Role
+Personal case study. I defined the evaluation logic, designed the analysis workflow, and built the demo end to end.
+
+## Key Decisions & Trade-offs
+- Treated ESRS as a structured checklist to make gaps explicit and actionable.
+- Surfaced evidence alongside findings to build trust in the analysis.
+- Focused on the core flow over full report authoring features.
+
 ## Key Features
 - ESRS coverage mapping
 - Gap list with evidence references
@@ -45,6 +53,11 @@ A report analysis flow that maps report content to ESRS requirements and highlig
 ## Risks & Constraints
 - Inputs vary widely in structure and quality
 - Models can misinterpret ambiguous language
+
+## What I'd Do Next
+- Add a coverage score and heatmap by ESRS section.
+- Support multilingual reports and mixed-format PDFs.
+- Provide an audit trail for review and sign-off workflows.
 
 ## Status / Deployment
 Showcase demo. Demonstrates what is possible after self-deployment.

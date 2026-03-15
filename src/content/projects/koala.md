@@ -32,6 +32,14 @@ The AI Act is complex and fast-moving, making early compliance checks difficult 
 ## Solution
 A guided assessment and Q&A flow tailored to AI Act requirements.
 
+## My Role
+Personal case study. I translated the AI Act into a product flow, defined the assessment logic, and built the demo.
+
+## Key Decisions & Trade-offs
+- Led with a guided questionnaire to reduce regulatory complexity for teams.
+- Prioritized actionable output over exhaustive legal detail.
+- Kept the flow lightweight so it can be adapted to different AI systems.
+
 ## Key Features
 - Compliance questionnaire
 - Risk classification guidance
@@ -45,6 +53,11 @@ A guided assessment and Q&A flow tailored to AI Act requirements.
 ## Risks & Constraints
 - Legal interpretation still requires expert review
 - Regulatory updates may require prompt refreshes
+
+## What I'd Do Next
+- Add an exportable compliance memo per system.
+- Provide tailored checklists by AI system type.
+- Maintain a regulation update log with change highlights.
 
 ## Status / Deployment
 Showcase demo. Demonstrates what is possible after self-deployment.

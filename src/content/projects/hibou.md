@@ -32,6 +32,14 @@ Reliable ESG data is scattered across sources, making it hard to compare countri
 ## Solution
 A live, interactive dashboard that aggregates ESG indicators by country with clear visualizations and a simple query flow.
 
+## My Role
+Personal case study. I owned the problem framing, indicator selection, UX flow, and end-to-end demo build.
+
+## Key Decisions & Trade-offs
+- Focused on country-level ESG indicators for comparability over broader, harder-to-normalize datasets.
+- Prioritized clarity and readability over exhaustive coverage.
+- Balanced a global overview (map) with deep dives (country profiles).
+
 ## Key Features
 - Global map and country profiles
 - ESG indicator exploration and comparisons
@@ -45,6 +53,11 @@ A live, interactive dashboard that aggregates ESG indicators by country with cle
 ## Risks & Constraints
 - Data freshness varies by source
 - Cross-country comparisons require careful context
+
+## What I'd Do Next
+- Add methodology notes and sources per indicator.
+- Introduce time-series trends for each country.
+- Provide exports for analysts (CSV / report-ready visuals).
 
 ## Status / Deployment
 Real deployed demo. This instance reflects the product in a live environment.
