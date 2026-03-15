@@ -9,7 +9,7 @@ demoUrl: "https://girafon.thomaslfb.eu/"
 ---
 
 ## Overview
-Girafon analyzes ESG and sustainability reports against ESRS requirements and flags gaps with supporting evidence.
+ESG teams face long, uneven reports and must assess ESRS coverage without a consistent structure.
 
 ## Problem
 Manual ESRS checks are slow and inconsistent, which increases compliance risk and review costs.
@@ -20,9 +20,9 @@ Manual ESRS checks are slow and inconsistent, which increases compliance risk an
 - Compliance and audit stakeholders
 
 ## Goals
-- Speed up ESRS alignment checks
-- Make gaps explicit and evidence-based
-- Provide a repeatable review workflow
+- Handle heterogeneous PDFs without manual clean-up
+- Surface evidence with each gap to earn trust in LLM output
+- Keep reviews consistent across reports
 
 ## Non-Goals
 - Final legal sign-off
@@ -30,10 +30,10 @@ Manual ESRS checks are slow and inconsistent, which increases compliance risk an
 - Long-term document storage
 
 ## Solution
-A report analysis flow that maps report content to ESRS requirements and highlights missing or weak coverage.
+A report analysis flow that extracts PDF content, maps it to 12 ESRS requirements, and highlights missing or weak coverage with evidence.
 
 ## My Role
-Personal case study. I defined the evaluation logic, designed the analysis workflow, and built the demo end to end.
+Personal case study. I defined the evaluation logic, designed the analysis workflow, and built the demo end to end, including a hard choice to require quoted evidence for each finding, which reduced recall but improved trust.
 
 ## Key Decisions & Trade-offs
 - Treated ESRS as a structured checklist to make gaps explicit and actionable.
@@ -45,16 +45,13 @@ Personal case study. I defined the evaluation logic, designed the analysis workf
 - Gap list with evidence references
 - Clear summary of what is missing
 
-## Success Metrics
-- Time saved per report review
-- Reduction in missed requirements
-- Adoption by reporting teams
-
 ## Risks & Constraints
 - Inputs vary widely in structure and quality
 - Models can misinterpret ambiguous language
+- Constraint: Most reports are heterogeneous PDFs, so I prioritized extraction reliability over broad coverage.
 
 ## What I'd Do Next
+- If I restarted, I would focus on a smaller ESRS subset to harden evidence mapping before scaling.
 - Add a coverage score and heatmap by ESRS section.
 - Support multilingual reports and mixed-format PDFs.
 - Provide an audit trail for review and sign-off workflows.

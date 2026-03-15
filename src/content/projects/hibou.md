@@ -20,8 +20,8 @@ Reliable ESG data is scattered across sources, making it hard to compare countri
 - Product teams looking for global ESG context
 
 ## Goals
-- Make ESG data easy to explore and compare
-- Provide fast, trustworthy insights
+- Balance comparability with uneven data freshness
+- Make cross-country signals readable without overpromising precision
 - Reduce the effort to answer country-level ESG questions
 
 ## Non-Goals
@@ -30,13 +30,13 @@ Reliable ESG data is scattered across sources, making it hard to compare countri
 - Predictive modeling
 
 ## Solution
-A live, interactive dashboard that aggregates ESG indicators by country with clear visualizations and a simple query flow.
+A live, interactive dashboard that aggregates 12 ESG indicators by country with clear visualizations and a simple query flow.
 
 ## My Role
-Personal case study. I owned the problem framing, indicator selection, UX flow, and end-to-end demo build.
+Personal case study. I owned the problem framing, indicator selection, UX flow, and end-to-end demo build, and indicator choice meant trading data freshness against comparability.
 
 ## Key Decisions & Trade-offs
-- Focused on country-level ESG indicators for comparability over broader, harder-to-normalize datasets.
+Focused on country-level ESG indicators for comparability over broader, harder-to-normalize datasets.
 - Prioritized clarity and readability over exhaustive coverage.
 - Balanced a global overview (map) with deep dives (country profiles).
 
@@ -45,16 +45,13 @@ Personal case study. I owned the problem framing, indicator selection, UX flow, 
 - ESG indicator exploration and comparisons
 - Clear visual storytelling for sustainability data
 
-## Success Metrics
-- Time to first insight
-- Number of countries explored per session
-- Repeat usage by analysts and teams
-
 ## Risks & Constraints
 - Data freshness varies by source
 - Cross-country comparisons require careful context
+- Constraint: I only used public, unevenly updated ESG datasets, so I optimized for clarity over coverage.
 
 ## What I'd Do Next
+- If I restarted, I would start with fewer indicators and validate the data pipeline before expanding scope.
 - Add methodology notes and sources per indicator.
 - Introduce time-series trends for each country.
 - Provide exports for analysts (CSV / report-ready visuals).
