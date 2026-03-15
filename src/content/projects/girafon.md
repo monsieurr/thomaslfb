@@ -45,6 +45,10 @@ Personal case study. I defined the evaluation logic, designed the analysis workf
 - Gap list with evidence references
 - Clear summary of what is missing
 
+## AI Use
+- LLM used to extract and map report text to ESRS requirements.
+- Findings include quoted evidence and are reviewed as advisory outputs.
+
 ## Risks & Constraints
 - Inputs vary widely in structure and quality
 - Models can misinterpret ambiguous language
@@ -58,6 +62,12 @@ Personal case study. I defined the evaluation logic, designed the analysis workf
 
 ## Status / Deployment
 Showcase demo. Demonstrates what is possible after self-deployment.
+
+## References
+- [Official Journal text (OJ L 2023/2772)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302772)
+- [EUR-Lex](https://eur-lex.europa.eu)
+- [GHG Protocol Corporate Standard](https://ghgprotocol.org/corporate-standard)
+- [EFRAG ESRS mandatory standards](https://www.efrag.org/en/projects/esrs-mandatory-standards)
 
 ## Links
 - [Live demo](https://girafon.thomaslfb.eu/)

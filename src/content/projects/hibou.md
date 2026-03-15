@@ -45,6 +45,10 @@ Focused on country-level ESG indicators for comparability over broader, harder-t
 - ESG indicator exploration and comparisons
 - Clear visual storytelling for sustainability data
 
+## AI Use
+- LLM used to summarize indicators and answer natural-language questions in the demo.
+- Core metrics come directly from published datasets.
+
 ## Risks & Constraints
 - Data freshness varies by source
 - Cross-country comparisons require careful context
@@ -58,6 +62,15 @@ Focused on country-level ESG indicators for comparability over broader, harder-t
 
 ## Status / Deployment
 Real deployed demo. This instance reflects the product in a live environment.
+
+## Data Sources
+- World Bank ESG Data Portal
+- World Bank Data Catalog (ESG bulk CSV)
+- Our World in Data, CO2 dataset
+- World Development Indicators (WDI) API
+- Worldwide Governance Indicators (WGI)
+- Country Metadata
+- RestCountries API
 
 ## Links
 - [Live demo](https://hibou.thomaslfb.eu/)

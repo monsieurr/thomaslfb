@@ -45,6 +45,10 @@ Personal case study. I translated the AI Act into a product flow by mapping obli
 - Risk classification guidance
 - Regulatory Q&A for AI Act topics
 
+## AI Use
+- LLM used for regulatory Q&A and to interpret questionnaire inputs.
+- Outputs are advisory and do not replace legal review.
+
 ## Risks & Constraints
 - Legal interpretation still requires expert review
 - Regulatory updates may require prompt refreshes
@@ -58,6 +62,13 @@ Personal case study. I translated the AI Act into a product flow by mapping obli
 
 ## Status / Deployment
 Showcase demo. Demonstrates what is possible after self-deployment.
+
+## References
+- [EU AI Act (Regulation (EU) 2024/1689), Official Journal text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+- [OJ L 2024/1689, EUR-Lex ELI](https://eur-lex.europa.eu)
+- [Digital Omnibus on AI, proposal announcement](https://digital-strategy.ec.europa.eu)
+- [COM(2025) 836, CELEX:52025PC0836 proposal text](https://eur-lex.europa.eu)
+- [Digital Omnibus Regulation Proposal](https://digital-strategy.ec.europa.eu)
 
 ## Links
 - [Live demo](https://koala.thomaslfb.eu/)
