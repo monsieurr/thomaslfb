@@ -1,5 +1,6 @@
 ---
 title: "Koala"
+emoji: "🐨"
 publishDate: 2026-03-15
 description: "Check whether an AI system is compliant with the EU AI Act and ask questions about regulations."
 tags: ["ai", "tool", "eu", "regulation", "compliancy", "ai-systems", "local-llm", "ai-act"]

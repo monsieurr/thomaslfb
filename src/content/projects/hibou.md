@@ -1,5 +1,6 @@
 ---
 title: "Hibou"
+emoji: "🦉"
 publishDate: 2026-03-15
 description: "Clear ESG information for every country through a global sustainability dashboard."
 tags: ["visualization", "world", "sustainability", "dashboard", "data-visualization", "eu", "wdi", "esg", "rse", "llm"]

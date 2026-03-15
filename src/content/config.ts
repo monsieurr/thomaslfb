@@ -22,6 +22,7 @@ const projectsCollection = defineCollection({
       isDraft: z.boolean().default(false),
 
       // Project-specific metadata
+      emoji: z.string().optional(),
       techStack: z.array(z.string()).optional(),
       repoUrl: z.string().url().optional(),
       demoUrl: z.string().url().optional(),

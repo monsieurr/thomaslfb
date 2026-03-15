@@ -1,5 +1,6 @@
 ---
 title: "Girafon"
+emoji: "🦒"
 publishDate: 2026-03-15
 description: "Automatically analyze ESG/sustainability reports against ESRS (CSRD) requirements and surface what's missing with evidence."
 tags: ["sustainability", "reporting", "eu", "omnibus", "esg", "esrs", "llm", "greenwashing", "csrd", "efrag", "ghg-protocol"]
