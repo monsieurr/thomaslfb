@@ -8,6 +8,9 @@ repoUrl: "https://github.com/monsieurr/girafon"
 demoUrl: "https://girafon.thomaslfb.eu/"
 ---
 
+![Girafon main page](/case-studies/hibou/screenshot_overview_girafon.png)
+
+
 ## Overview
 ESG teams face long, uneven reports and must assess ESRS coverage without a consistent structure.
 
