@@ -7,7 +7,7 @@ isDraft: false
 ---
 
 ## Introduction
-The AI Act (Regulation (EU) 2024/1689) is no longer just a proposal—it is the law of the land. Having entered into force on **2 August 2024**, we are now 18 months into the implementation phase.
+The AI Act (Regulation (EU) 2024/1689) is no longer just a proposal. It is the law of the land. Having entered into force on **2 August 2024**, we are now 18 months into the implementation phase.
 
 As of today (**February 7, 2026**), the first two waves of regulation have already hit: prohibited practices are banned, and rules for General-Purpose AI (GPAI) are active. The next hurdle? The comprehensive regime for **High-Risk AI systems**, which takes effect in less than six months.
 

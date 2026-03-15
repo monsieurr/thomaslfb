@@ -18,7 +18,7 @@ I work and tinker in many things. While this laptop doesn’t handle heavy ML tr
 
 ---
 
-## Practical side — what I changed
+## Practical side: what I changed
 
 ### Replacements and timeline
 *   **Charger (MagSafe 2, 45W):** Replaced ~2017 when the original cabling frayed and became unreliable.
@@ -39,7 +39,7 @@ The parts were sourced online, coming from chineses manufacturers.
 
 ---
 
-## Quick carbon estimate — repair vs. new
+## Quick carbon estimate: repair vs. new
 
 Beware, this is a pragmatic, conservative estimate, not a full academic study.
 
@@ -61,7 +61,7 @@ Beware, this is a pragmatic, conservative estimate, not a full academic study.
 
 This is roughly **one-fifth** of a new laptop’s footprint. By repairing, I avoided the manufacturing impact of a new device, saving roughly **190 kg CO₂e** compared to the industry average.
 
-### Comparison table — repair vs. new
+### Comparison table: repair vs. new
 
 | Item / Action | Estimated CO₂ (kg CO₂e) | Typical Cost (EUR) | Notes |
 | :--- | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ This is roughly **one-fifth** of a new laptop’s footprint. By repairing, I avo
 | **SSD (256 GB)** | 41.0 | €35–€70 | Flash storage embodied carbon |
 | **Charger** | 5.0 | €30–€60 | Conservative estimate |
 | **Shipping** | 0.2 | Included | Consolidated/Maritime assumed |
-| **Total — Repair** | **≈53.8** | **€155–€220** | **Life extended by 3+ years** |
+| **Total - Repair** | **≈53.8** | **€155–€220** | **Life extended by 3+ years** |
 | **New Laptop** | **≈246** | **€800+** | Manufacture + Supply chain |
 
 > **Takeaway:** For a modest financial cost, replacing key parts extends life and avoids the large emissions spike of manufacturing a new device.
@@ -79,7 +79,7 @@ This is roughly **one-fifth** of a new laptop’s footprint. By repairing, I avo
 ## Things I asked myself (and you might too)
 
 ### “Ok, but I need more power!”
-Heavy ML, video editing, or large photo exports might justify a new device. However, for lightweight tasks—notes, email, web, small photo edits, data exploration—a refreshed older machine works perfectly. **Reuse (donation/sale)** can extend its life for someone else if it no longer fits your primary workflow.
+Heavy ML, video editing, or large photo exports might justify a new device. However, for lightweight tasks: notes, email, web, small photo edits, data exploration, a refreshed older machine works perfectly. **Reuse (donation/sale)** can extend its life for someone else if it no longer fits your primary workflow.
 
 ### “I don’t want to repair my old computer”
 If you prefer not to repair: donate, sell, or pass it on. **Recycle only as a last resort.** Manufacturing dominates lifecycle emissions (75-85%), so keeping the device in circulation is the highest-impact choice.
@@ -104,7 +104,7 @@ Recycling is energy-intensive and rarely recovers 100% of materials. Extending t
 
 My work mixes sustainability, data, AI experiments, and photography. This biases me toward measured, data-informed decisions: seeking the smallest carbon footprint for maximum usefulness.
 
-This laptop remains a low-distraction device for lightweight projects, testing Python scripts, quick photo edits, and travel. Small upgrades—charger, battery, SSD—restored usability enough to keep it in daily rotation for over a decade.
+This laptop remains a low-distraction device for lightweight projects, testing Python scripts, quick photo edits, and travel. Small upgrades (charger, battery, SSD) restored usability enough to keep it in daily rotation for over a decade.
 
 ---
 

@@ -6,17 +6,17 @@ tags: ["Workflow", "Organization"]
 isDraft: false
 ---
 
-Daily life can be chaotic. This short note describes my personal organization stack and the practical rules I use for managing time, tasks, and notes. It’s not a universal solution—everyone adapts tools to their preferences—but perhaps you’ll find an idea or two that works for you.
+Daily life can be chaotic. This short note describes my personal organization stack and the practical rules I use for managing time, tasks, and notes. It’s not a universal solution; everyone adapts tools to their preferences, but perhaps you’ll find an idea or two that works for you.
 
 Here is what I’ve improved over the years, what I use today, and the principles I stick to.
 
 ## The four essentials
 
 To get things done, I believe you only need four building blocks:
-*   **A todo list** — to define and track what needs doing.
-*   **A calendar** — to block time and track commitments.
-*   **A timer** — to measure time and protect focus.
-*   **Somewhere to write** — to capture learnings, ideas, and decisions.
+*   **A todo list** - to define and track what needs doing.
+*   **A calendar** - to block time and track commitments.
+*   **A timer** - to measure time and protect focus.
+*   **Somewhere to write** - to capture learnings, ideas, and decisions.
 
 ### 1. Todo List
 I’ve cycled through Todoist, Trello, and plain paper. Today, I keep a single "master" list in **Notion** and automate the recurring tasks.
@@ -42,7 +42,7 @@ Treat your calendar as an external memory for commitments. I also keep concise n
 I’ve migrated between Evernote, Notion, and Obsidian. I now take notes in two ways: **paper for capture** and a **synced app for storage**.
 
 **What changed with AI:**
-For years, the productivity gold standard was having a "Single Source of Truth"—one app where *everything* had to live. That has changed due to recent standards like the **Model Context Protocol (MCP)**.
+For years, the productivity gold standard was having a "Single Source of Truth", one app where *everything* had to live. That has changed due to recent standards like the **Model Context Protocol (MCP)**.
 
 MCP acts as a universal standard that allows AI assistants to connect securely to local and remote data sources. Instead of manually moving data to one place, you can now authorize an AI agent to "read" your Notion pages, Google Calendar events, and GitHub repositories simultaneously. This means you can query your entire digital life from a single interface without needing to centralize the data manually.
 
