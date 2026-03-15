@@ -32,6 +32,9 @@ The AI Act is complex and fast-moving, making early compliance checks difficult 
 ## Solution
 A guided assessment and Q&A flow tailored to AI Act requirements.
 
+![Koala overview dashboard](/case-studies/hibou/screenshot_overview_koala.png)
+
+
 ## My Role
 Personal case study. I translated the AI Act into a product flow by mapping obligations to a step-by-step intake, defined the assessment logic, and built the demo.
 
