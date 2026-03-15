@@ -3,8 +3,8 @@ title: "Green Project Score"
 publishDate: 2024-01-10
 description: "A calculator tool to assess the environmental impact of digital projects before they start."
 techStack: ["Python", "Streamlit", "Pandas"]
-link: "https://google.com"
-repo: "https://github.com"
+demoUrl: "https://google.com"
+repoUrl: "https://github.com"
 ---
 
 ## Overview

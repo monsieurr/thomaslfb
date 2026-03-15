@@ -20,6 +20,11 @@ const projectsCollection = defineCollection({
       description: z.string(),
       tags: z.array(z.string()).optional(),
       isDraft: z.boolean().default(false),
+
+      // Project-specific metadata
+      techStack: z.array(z.string()).optional(),
+      repoUrl: z.string().url().optional(),
+      demoUrl: z.string().url().optional(),
       
       // 2. Add the cover image
       // image() checks if the file exists in src/assets

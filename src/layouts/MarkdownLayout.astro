@@ -11,10 +11,31 @@ const { frontmatter } = Astro.props;
       <h1>{frontmatter.title}</h1>
       <p class="lead">{frontmatter.description}</p>
       
-      {/* Only showing contextual tags for Articles if they exist, not Tech Stacks */}
+      {/* Article tags */}
       {frontmatter.tags && (
         <div class="tags-container">
           {frontmatter.tags.map((t: string) => <span class="tag">#{t}</span>)}
+        </div>
+      )}
+
+      {frontmatter.techStack && (
+        <div class="tags-container">
+          {frontmatter.techStack.map((t: string) => <span class="tag">{t}</span>)}
+        </div>
+      )}
+
+      {(frontmatter.demoUrl || frontmatter.repoUrl) && (
+        <div class="project-links">
+          {frontmatter.demoUrl && (
+            <a href={frontmatter.demoUrl} target="_blank" rel="noopener noreferrer" class="btn">
+              View Demo
+            </a>
+          )}
+          {frontmatter.repoUrl && (
+            <a href={frontmatter.repoUrl} target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              View Code
+            </a>
+          )}
         </div>
       )}
       
@@ -69,6 +90,14 @@ const { frontmatter } = Astro.props;
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
     color: var(--text-main);
+  }
+
+  .project-links {
+    margin-top: 1.75rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .divider {
