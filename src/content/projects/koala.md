@@ -32,7 +32,7 @@ The AI Act is complex and fast-moving, making early compliance checks difficult 
 ## Solution
 A guided assessment and Q&A flow tailored to AI Act requirements.
 
-![Koala overview dashboard](/case-studies/koala/screenshot_overview_koala.png)
+![Koala overview dashboard](/images/case-studies/koala/screenshot_overview_koala.png)
 
 
 ## My Role

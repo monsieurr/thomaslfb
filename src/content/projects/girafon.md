@@ -8,7 +8,7 @@ repoUrl: "https://github.com/monsieurr/girafon"
 demoUrl: "https://girafon.thomaslfb.eu/"
 ---
 
-![Girafon main page](/case-studies/girafon/screenshot_overview_girafon.png)
+![Girafon main page](/images/case-studies/girafon/screenshot_overview_girafon.png)
 
 
 ## Overview

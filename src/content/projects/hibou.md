@@ -32,7 +32,7 @@ Reliable ESG data is scattered across sources, making it hard to compare countri
 ## Solution
 A live, interactive dashboard that aggregates 12 ESG indicators by country with clear visualizations and a simple query flow.
 
-![Hibou overview dashboard](/case-studies/hibou/screenshot_overview_hibou.png)
+![Hibou overview dashboard](/images/case-studies/hibou/screenshot_overview_hibou.png)
 
 ## My Role
 Personal case study. I owned the problem framing, indicator selection, UX flow, and end-to-end demo build, and indicator choice meant trading data freshness against comparability.
