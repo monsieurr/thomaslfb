@@ -1,5 +1,12 @@
 ---
-export const prerender = false;
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('projects');
+  return projectEntries.map(entry => ({
+    params: { slug: entry.slug },
+  }));
+}
 
 const { slug } = Astro.params;
 return Astro.redirect(`/case-studies/${slug}`, 301);
