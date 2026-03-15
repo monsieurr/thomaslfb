@@ -170,4 +170,11 @@ const showCardLinks = true;
   .projects-note {
     margin-top: 0.75rem;
   }
+
+  @media (min-width: 900px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+  }
 </style>
