@@ -67,10 +67,10 @@ Personal case study. I defined the evaluation logic, designed the analysis workf
 Showcase demo. Demonstrates what is possible after self-deployment.
 
 ## References
-- [Official Journal text (OJ L 2023/2772)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202302772)
-- [EUR-Lex](https://eur-lex.europa.eu)
+- [Commission Delegated Regulation (EU) 2023/2772 (ESRS), Official Journal](https://op.europa.eu/en/publication-detail/-/publication/98029000-a070-11ee-b164-01aa75ed71a1/language-en)
+- [ELI for Delegated Regulation (EU) 2023/2772](https://data.europa.eu/eli/reg_del/2023/2772/oj)
 - [GHG Protocol Corporate Standard](https://ghgprotocol.org/corporate-standard)
-- [EFRAG ESRS mandatory standards](https://www.efrag.org/en/projects/esrs-mandatory-standards)
+- [EFRAG ESRS Knowledge Hub](https://knowledgehub.efrag.org/eng)
 
 ## Links
 - [Live demo](https://girafon.thomaslfb.eu/)

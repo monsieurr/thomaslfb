@@ -67,11 +67,11 @@ Personal case study. I translated the AI Act into a product flow by mapping obli
 Showcase demo. Demonstrates what is possible after self-deployment.
 
 ## References
-- [EU AI Act (Regulation (EU) 2024/1689), Official Journal text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
-- [OJ L 2024/1689, EUR-Lex ELI](https://eur-lex.europa.eu)
-- [Digital Omnibus on AI, proposal announcement](https://digital-strategy.ec.europa.eu)
-- [COM(2025) 836, CELEX:52025PC0836 proposal text](https://eur-lex.europa.eu)
-- [Digital Omnibus Regulation Proposal](https://digital-strategy.ec.europa.eu)
+- [EU AI Act (Regulation (EU) 2024/1689), Official Journal text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng)
+- [OJ L 2024/1689, ELI](https://data.europa.eu/eli/reg/2024/1689/oj)
+- [Digital Omnibus on AI, proposal announcement](https://digital-strategy.ec.europa.eu/en/library/digital-omnibus-ai-regulation-proposal)
+- [COM(2025) 836, CELEX:52025PC0836 proposal text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0836)
+- [Digital Omnibus Regulation Proposal](https://digital-strategy.ec.europa.eu/en/library/digital-omnibus-regulation-proposal)
 
 ## Links
 - [Live demo](https://koala.thomaslfb.eu/)
