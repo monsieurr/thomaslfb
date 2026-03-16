@@ -33,7 +33,7 @@ Manual ESRS checks are slow and inconsistent, which increases compliance risk an
 - Long-term document storage
 
 ## Solution
-A report analysis flow that extracts PDF content, maps it to 12 ESRS requirements, and highlights missing or weak coverage with evidence.
+A report analysis flow that extracts PDF content, maps it to ESRS disclosures, and highlights missing or weak coverage with evidence.
 
 ## My Role
 Personal case study. I defined the evaluation logic, designed the analysis workflow, and built the demo end to end, including a hard choice to require quoted evidence for each finding, which reduced recall but improved trust.
@@ -44,9 +44,9 @@ Personal case study. I defined the evaluation logic, designed the analysis workf
 - Focused on the core flow over full report authoring features.
 
 ## Key Features
-- ESRS coverage mapping
-- Gap list with evidence references
-- Clear summary of what is missing
+- ESRS coverage mapping with per-disclosure status
+- Gap list with evidence references and a prioritized fix list
+- Clear summary with a weighted score and greenwashing signals
 
 ## AI Use
 - LLM used to extract and map report text to ESRS requirements.

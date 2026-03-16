@@ -44,12 +44,12 @@ Personal case study. I translated the AI Act into a product flow by mapping obli
 - Kept the flow lightweight so it can be adapted to different AI systems.
 
 ## Key Features
-- Compliance questionnaire
-- Risk classification guidance
-- Regulatory Q&A for AI Act topics
+- Catalog intake (AI system entries)
+- Role-aware risk and obligation summaries
+- Regulatory Q&A with citations
 
 ## AI Use
-- LLM used for regulatory Q&A and to interpret questionnaire inputs.
+- LLM used for regulatory Q&A and to interpret catalog entries.
 - Outputs are advisory and do not replace legal review.
 
 ## Risks & Constraints
@@ -64,7 +64,7 @@ Personal case study. I translated the AI Act into a product flow by mapping obli
 - Maintain a regulation update log with change highlights.
 
 ## Status / Deployment
-Showcase demo. Demonstrates what is possible after self-deployment.
+Showcase demo. Demonstrates what is possible after self-deployment. Public demo is scripted; full ingestion and RAG run locally.
 
 ## References
 - [EU AI Act (Regulation (EU) 2024/1689), Official Journal text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng)

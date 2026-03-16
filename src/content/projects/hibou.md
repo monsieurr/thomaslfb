@@ -2,7 +2,7 @@
 title: "Hibou"
 emoji: "🦉"
 publishDate: 2026-03-15
-description: "Clear ESG information for every country through a global sustainability dashboard."
+description: "Clear ESG information across countries through a global sustainability dashboard."
 tags: ["visualization", "world", "sustainability", "dashboard", "data-visualization", "eu", "wdi", "esg", "rse", "llm"]
 repoUrl: "https://github.com/monsieurr/hibou"
 demoUrl: "https://hibou.thomaslfb.eu/"
@@ -30,7 +30,7 @@ Reliable ESG data is scattered across sources, making it hard to compare countri
 - Predictive modeling
 
 ## Solution
-A live, interactive dashboard that aggregates 12 ESG indicators by country with clear visualizations and a simple query flow.
+A live, interactive dashboard that aggregates 27 ESG indicators by country with clear visualizations and a simple query flow.
 
 ![Hibou overview dashboard](/images/case-studies/hibou/screenshot_overview_hibou.png)
 
@@ -48,7 +48,7 @@ Focused on country-level ESG indicators for comparability over broader, harder-t
 - Clear visual storytelling for sustainability data
 
 ## AI Use
-- LLM used to summarize indicators and answer natural-language questions in the demo.
+- LLM used to generate narrative summaries; the demo shows precomputed narratives.
 - Core metrics come directly from published datasets.
 
 ## Risks & Constraints
